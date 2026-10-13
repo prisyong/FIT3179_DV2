@@ -6,7 +6,9 @@
   },
   "width": 330,
   "height": 300,
-  "data": { "url": "data/line_chart_data.csv" },
+  "data": {
+    "url": "data/line_chart_data.csv"
+  },
   "encoding": {
     "x": {
       "field": "Month",
@@ -25,8 +27,13 @@
         "Nov",
         "Dec"
       ],
-      "title": null,
-      "axis": { "labelAngle": 0 }
+      "title": "Month (1 = January)",
+      "axis": {
+        "labelAngle": 0,
+        "labelAlign": "center",
+        "labelFontSize": 11,
+        "labelExpr": "indexof([\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"], datum.value) + 1"
+      }
     }
   },
   "layer": [
@@ -35,37 +42,70 @@
         "type": "line",
         "strokeWidth": 3,
         "color": "#2171b5",
-        "point": { "filled": true, "size": 60, "color": "#2171b5" }
+        "point": {
+          "filled": true,
+          "size": 60,
+          "color": "#2171b5"
+        }
       },
       "encoding": {
         "y": {
           "field": "Sightings",
           "type": "quantitative",
           "title": "Sightings",
-          "scale": { "zero": true },
-          "axis": { "format": "~s" }
+          "scale": {
+            "zero": true
+          },
+          "axis": {
+            "format": "~s"
+          }
         },
         "tooltip": [
-          { "field": "Month" },
-          { "field": "Sightings", "type": "quantitative", "format": "," },
-          { "field": "Observers", "type": "quantitative", "format": "," }
+          {
+            "field": "Month"
+          },
+          {
+            "field": "Sightings",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Observers",
+            "type": "quantitative",
+            "format": ","
+          }
         ]
       }
     },
     {
-      "data": { "values": [{ "Month": "May", "Sightings": 90000 }] },
+      "data": {
+        "values": [
+          {
+            "Month": "May",
+            "Sightings": 90000
+          }
+        ]
+      },
       "mark": {
         "type": "text",
         "align": "center",
         "fontSize": 11,
         "fontWeight": "bold",
         "color": "#222222",
-        "lineHeight": 14
+        "lineHeight": 14,
+        "dy": 0,
+        "dx": 0
       },
       "encoding": {
-        "y": { "field": "Sightings", "type": "quantitative" },
+        "y": {
+          "field": "Sightings",
+          "type": "quantitative"
+        },
         "text": {
-          "value": ["Peak: 93,308 in October –", "54% above February's low"]
+          "value": [
+            "Peak: 93,308 in October –",
+            "54% above February's low"
+          ]
         }
       }
     }

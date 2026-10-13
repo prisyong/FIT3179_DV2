@@ -33,9 +33,12 @@
         "Nov",
         "Dec"
       ],
-      "title": null,
+      "title": "Month (1 = January)",
       "axis": {
-        "labelAngle": 0
+        "labelAngle": 0,
+        "labelAlign": "center",
+        "labelFontSize": 11,
+        "labelExpr": "indexof([\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"], datum.value) + 1"
       }
     },
     "y": {
@@ -166,7 +169,7 @@
         "fontWeight": "bold",
         "color": "#2e7d32",
         "lineHeight": 15,
-        "dy": 48,
+        "dy": 70,
         "baseline": "top"
       },
       "encoding": {
@@ -174,7 +177,7 @@
           "value": "#2e7d32"
         },
         "text": {
-          "value": "\u2191 Superb Fairywren drops from 3rd to 5th in late winter (Aug)"
+          "value": "↑ Superb Fairywren drops from 3rd to 5th in late winter (month 8, August)"
         }
       }
     }

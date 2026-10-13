@@ -2,25 +2,39 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Which season has the most sightings?",
-    "subtitle": "Total sightings of all 8 species per season, 2025 (Summer = Dec–Feb)"
+    "subtitle": "Total sightings of all 8 species per season, 2025 (Summer = Dec\u2013Feb)"
   },
   "width": 330,
   "height": 280,
-  "data": { "url": "data/season_line_chart_data.csv" },
+  "data": {
+    "url": "data/season_line_chart_data.csv"
+  },
   "encoding": {
     "x": {
       "field": "Season",
       "type": "ordinal",
-      "sort": ["Summer", "Autumn", "Winter", "Spring"],
+      "sort": [
+        "Summer",
+        "Autumn",
+        "Winter",
+        "Spring"
+      ],
       "title": null,
-      "axis": { "labelAngle": 0, "labelFontSize": 12 }
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 12
+      }
     },
     "y": {
       "field": "Sightings",
       "type": "quantitative",
       "title": "Sightings",
-      "scale": { "zero": true },
-      "axis": { "format": "~s" }
+      "scale": {
+        "zero": true
+      },
+      "axis": {
+        "format": "~s"
+      }
     }
   },
   "layer": [
@@ -29,28 +43,58 @@
         "type": "line",
         "strokeWidth": 3,
         "color": "#444444",
-        "point": { "filled": true, "size": 80, "color": "#444444" }
+        "point": {
+          "filled": true,
+          "size": 80,
+          "color": "#444444"
+        }
       },
       "encoding": {
         "tooltip": [
-          { "field": "Season" },
-          { "field": "Sightings", "type": "quantitative", "format": "," },
-          { "field": "Share_Pct", "title": "Share of year (%)" }
+          {
+            "field": "Season"
+          },
+          {
+            "field": "Sightings",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Share_Pct",
+            "title": "Share of year (%)"
+          }
         ]
       }
     },
     {
-      "mark": { "type": "text", "dy": -14, "fontSize": 11, "color": "#444444" },
+      "mark": {
+        "type": "text",
+        "dy": -14,
+        "fontSize": 11,
+        "color": "#444444"
+      },
       "encoding": {
-        "text": { "field": "Sightings", "type": "quantitative", "format": "," }
+        "text": {
+          "field": "Sightings",
+          "type": "quantitative",
+          "format": ","
+        }
       }
     },
     {
-      "data": { "values": [{ "Season": "Spring", "Sightings": 150000 }] },
+      "data": {
+        "values": [
+          {
+            "Season": "Spring",
+            "Sightings": 150000
+          }
+        ]
+      },
       "mark": {
         "type": "text",
         "align": "right",
         "dx": -8,
+        "dy": 0,
         "fontSize": 11,
         "fontWeight": "bold",
         "color": "#222222",
@@ -59,8 +103,8 @@
       "encoding": {
         "text": {
           "value": [
-            "Spring: 30% of the year's sightings –",
-            "a third more than autumn ↑"
+            "Spring: 30% of the year's sightings \u2013",
+            "a third more than autumn \u2191"
           ]
         }
       }

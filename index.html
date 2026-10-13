@@ -6,10 +6,7 @@
     <title>Australian Bird Sightings 2025</title>
 
     <!-- Bootstrap for page styling -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 
     <!-- Vega-Lite for the charts -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
@@ -19,56 +16,29 @@
     <style>
       /* only small additions on top of Bootstrap */
       /* readable text: about 46 characters (max ~12 words) per line */
-      .lead,
-      section > p {
-        max-width: 46ch;
-      }
-      .card p {
-        max-width: 46ch;
-        margin-left: auto;
-        margin-right: auto;
-      }
+      .lead, section > p { max-width: 46ch; }
+      .card p { max-width: 46ch; margin-left: auto; margin-right: auto; }
       /* page: white margins left and right, coloured content column in the middle */
-      body {
-        background: #ffffff;
-      }
-      main {
-        background: #faf8f3;
-      } /* content column colour */
+      body { background: #ffffff; }
+      main { background: #faf8f3; }                          /* content column colour */
       /* findings text: left-aligned, max ~12 words per line */
-      .findings {
-        max-width: 44ch;
-        text-align: left;
-        color: #495057;
-      }
-      .card .findings {
-        margin: 0 auto;
-      }
-      .findings p {
-        max-width: none;
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .chart-card,
-      .map-card {
-        background: #ebe8e1;
-        border: none;
-      } /* one card colour for every chart (also the map sea) */
-      .col-6 > p {
-        max-width: 46ch;
-      }
+      .findings { max-width: 44ch; text-align: left; color: #495057; }
+      .card .findings { margin: 0 auto; }
+      .findings p { max-width: none; margin-left: 0; margin-right: 0; }
+      .chart-card, .map-card { background: #ebe8e1; border: none; }   /* one card colour for every chart (also the map sea) */
+      .col-6 > p { max-width: 46ch; }
     </style>
   </head>
   <body>
     <main class="container py-5 px-5" style="max-width: 1000px">
+
       <!-- ===== Overview ===== -->
       <header class="mb-5">
         <h1 class="display-5 fw-bold">Australian Bird Sightings 2025</h1>
         <p class="lead text-secondary">
-          Birdwatchers reported eight familiar Australian birds over 867,000
-          times in 2025 through the citizen science apps eBird and iNaturalist.
-          Where were they seen, and what does that tell us about the birds – and
-          about the people watching them?
+          Birdwatchers reported eight familiar Australian birds over 867,000 times in 2025
+          through the citizen science apps eBird and iNaturalist. Where were they seen, and what
+          does that tell us about the birds – and about the people watching them?
         </p>
       </header>
 
@@ -90,19 +60,8 @@
           </div>
           <div class="col-6">
             <div class="findings">
-              <p>
-                <strong>What we see.</strong> The Australian Magpie was reported
-                252,746 times, more than any other bird. Five common species
-                make up 94% of all sightings, while the Emu, Wedge-tailed Eagle
-                and Tawny Frogmouth together make up under 6%.
-              </p>
-              <p class="mb-0">
-                <strong>Why.</strong> This reflects where people look as much as
-                how many birds there are. The top five are bold, noisy birds of
-                suburbs and parks, seen on everyday walks: 62% of all
-                birdwatchers reported a Magpie. The Emu lives mostly in open
-                country far from cities, and only 15% of observers recorded one.
-              </p>
+              <p><strong>What we see.</strong> The Australian Magpie was reported 252,746 times, more than any other bird. Five common species make up 94% of all sightings, while the Emu, Wedge-tailed Eagle and Tawny Frogmouth together make up under 6%.</p>
+              <p class="mb-0"><strong>Why.</strong> This reflects where people look as much as how many birds there are. The top five are bold, noisy birds of suburbs and parks, seen on everyday walks: 62% of all birdwatchers reported a Magpie. The Emu lives mostly in open country far from cities, and only 15% of observers recorded one.</p>
             </div>
           </div>
         </div>
@@ -117,18 +76,8 @@
           </div>
           <div class="col-6">
             <div class="findings">
-              <p>
-                <strong>What we see.</strong> Out of 100 squares, the Magpie
-                fills 29 and the Rainbow Lorikeet 20, so two birds make up
-                almost half of all sightings. The three least reported birds
-                share just 6 squares.
-              </p>
-              <p class="mb-0">
-                <strong>Why.</strong> Loud, colourful and confident birds are
-                easily noticed and logged, so they dominate the record. Quiet or
-                rural birds can be common yet rarely recorded. The share of
-                sightings shows what people notice, not how many birds exist.
-              </p>
+              <p><strong>What we see.</strong> Out of 100 squares, the Magpie fills 29 and the Rainbow Lorikeet 20, so two birds make up almost half of all sightings. The three least reported birds share just 6 squares.</p>
+              <p class="mb-0"><strong>Why.</strong> Loud, colourful and confident birds are easily noticed and logged, so they dominate the record. Quiet or rural birds can be common yet rarely recorded. The share of sightings shows what people notice, not how many birds exist.</p>
             </div>
           </div>
         </div>
@@ -138,9 +87,8 @@
       <section class="mb-5">
         <h2 class="fw-bold">2. Where and when are birds observed?</h2>
         <p class="text-secondary mb-4">
-          Observations are far from even. Small, populous areas in the
-          south-east produce most reports, while the vast inland contributes
-          very few – birdwatching follows people.
+          Observations are far from even. Small, populous areas in the south-east produce most reports,
+          while the vast inland contributes very few – birdwatching follows people.
         </p>
 
         <div class="card map-card rounded-4 mb-3">
@@ -151,19 +99,10 @@
         <!-- findings below a wide chart: "what we see" left, "why" right -->
         <div class="row findings-row mb-5">
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>What we see.</strong> The ACT has 19,111 sightings per
-              1,000 km², about 16 times Victoria, the next highest. The Northern
-              Territory has fewer than 4, and Western Australia under 14.
-            </p>
+            <p class="findings mb-0"><strong>What we see.</strong> The ACT has 19,111 sightings per 1,000 km², about 16 times Victoria, the next highest. The Northern Territory has fewer than 4, and Western Australia under 14.</p>
           </div>
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>Why.</strong> Sightings per area follow people. The ACT is
-              small and densely settled, with 1,277 active birdwatchers covering
-              just 2,358 km². The NT and WA are huge but sparsely populated, so
-              most of their land is rarely visited by anyone with a birding app.
-            </p>
+            <p class="findings mb-0"><strong>Why.</strong> Sightings per area follow people. The ACT is small and densely settled, with 1,277 active birdwatchers covering just 2,358 km². The NT and WA are huge but sparsely populated, so most of their land is rarely visited by anyone with a birding app.</p>
           </div>
         </div>
 
@@ -175,20 +114,10 @@
         <!-- findings below a wide chart: "what we see" left, "why" right -->
         <div class="row findings-row mb-5">
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>What we see.</strong> The biggest circles sit on the
-              capital cities. The area around Melbourne alone has 81,410
-              sightings, and the five busiest areas hold over a third of all
-              sightings in Australia.
-            </p>
+            <p class="findings mb-0"><strong>What we see.</strong> The biggest circles sit on the capital cities. The area around Melbourne alone has 81,410 sightings, and the five busiest areas hold over a third of all sightings in Australia.</p>
           </div>
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>Why.</strong> Most birdwatching happens close to home, in
-              urban parks, gardens and wetlands. Switching the species to the
-              Emu moves the circles inland, showing that rarer country birds are
-              recorded mainly when observers travel to where those birds live.
-            </p>
+            <p class="findings mb-0"><strong>Why.</strong> Most birdwatching happens close to home, in urban parks, gardens and wetlands. Switching the species to the Emu moves the circles inland, showing that rarer country birds are recorded mainly when observers travel to where those birds live.</p>
           </div>
         </div>
 
@@ -202,19 +131,8 @@
           </div>
           <div class="col-6">
             <div class="findings">
-              <p>
-                <strong>What we see.</strong> Sightings dip to 60,669 in
-                February, rise steadily through winter and peak at 93,308 in
-                October before easing over summer. October has 54% more
-                sightings than February.
-              </p>
-              <p class="mb-0">
-                <strong>Why.</strong> Spring is breeding season, when birds
-                call, display and build nests, so they are easier to find.
-                People change too: active observers rise from 4,666 in February
-                to 7,144 in October. More eyes in the mild spring weather mean
-                more records.
-              </p>
+              <p><strong>What we see.</strong> Sightings dip to 60,669 in February, rise steadily through winter and peak at 93,308 in October before easing over summer. October has 54% more sightings than February.</p>
+              <p class="mb-0"><strong>Why.</strong> Spring is breeding season, when birds call, display and build nests, so they are easier to find. People change too: active observers rise from 4,666 in February to 7,144 in October. More eyes in the mild spring weather mean more records.</p>
             </div>
           </div>
         </div>
@@ -224,8 +142,8 @@
       <section class="mb-5">
         <h2 class="fw-bold">3. How do the seasons change sightings?</h2>
         <p class="text-secondary mb-4">
-          Spring brings the most reports for almost every species – partly more
-          bird activity, and partly more people out birdwatching.
+          Spring brings the most reports for almost every species – partly more bird activity,
+          and partly more people out birdwatching.
         </p>
 
         <div class="row align-items-center mb-5">
@@ -238,18 +156,8 @@
           </div>
           <div class="col-6">
             <div class="findings">
-              <p>
-                <strong>What we see.</strong> Spring has 256,447 sightings,
-                almost 30% of the year. Autumn is the quietest season with
-                192,119, while summer and winter sit in between.
-              </p>
-              <p class="mb-0">
-                <strong>Why.</strong> The spring peak combines more visible
-                birds with more people outdoors. Breeding birds are louder and
-                busier, and pleasant weather draws observers out. In autumn,
-                after breeding, birds are quieter and fewer people go out
-                looking for them.
-              </p>
+              <p><strong>What we see.</strong> Spring has 256,447 sightings, almost 30% of the year. Autumn is the quietest season with 192,119, while summer and winter sit in between.</p>
+              <p class="mb-0"><strong>Why.</strong> The spring peak combines more visible birds with more people outdoors. Breeding birds are louder and busier, and pleasant weather draws observers out. In autumn, after breeding, birds are quieter and fewer people go out looking for them.</p>
             </div>
           </div>
         </div>
@@ -262,21 +170,10 @@
         <!-- findings below a wide chart: "what we see" left, "why" right -->
         <div class="row findings-row mb-5">
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>What we see.</strong> The Magpie stays 1st and the Emu 8th
-              in every month. The Superb Fairywren drops from 3rd to 5th in
-              August, and the Tawny Frogmouth overtakes the Wedge-tailed Eagle
-              from October.
-            </p>
+            <p class="findings mb-0"><strong>What we see.</strong> The Magpie stays 1st and the Emu 8th in every month. The Superb Fairywren drops from 3rd to 5th in August, and the Tawny Frogmouth overtakes the Wedge-tailed Eagle from October.</p>
           </div>
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>Why.</strong> Male fairywrens lose their bright blue
-              breeding colours in the cooler months, making them easier to
-              overlook. In spring, frogmouths nest in the open in parks and
-              gardens, so they are easier for people to spot and photograph than
-              at other times of year.
-            </p>
+            <p class="findings mb-0"><strong>Why.</strong> Male fairywrens lose their bright blue breeding colours in the cooler months, making them easier to overlook. In spring, frogmouths nest in the open in parks and gardens, so they are easier for people to spot and photograph than at other times of year.</p>
           </div>
         </div>
 
@@ -288,19 +185,10 @@
         <!-- findings below a wide chart: "what we see" left, "why" right -->
         <div class="row findings-row mb-5">
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>What we see.</strong> Every band swells towards an October
-              peak. From February to October, sightings rise by 32,639, and the
-              five common birds supply 92% of that increase.
-            </p>
+            <p class="findings mb-0"><strong>What we see.</strong> Every band swells towards an October peak. From February to October, sightings rise by 32,639, and the five common birds supply 92% of that increase.</p>
           </div>
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>Why.</strong> The spring rise comes mostly from familiar
-              birds people already see every day, rather than from rare birds
-              suddenly appearing. As more people go outside in spring, they
-              simply log more of the common birds around them.
-            </p>
+            <p class="findings mb-0"><strong>Why.</strong> The spring rise comes mostly from familiar birds people already see every day, rather than from rare birds suddenly appearing. As more people go outside in spring, they simply log more of the common birds around them.</p>
           </div>
         </div>
       </section>
@@ -309,9 +197,8 @@
       <section class="mb-5">
         <h2 class="fw-bold">4. Where is bird diversity highest?</h2>
         <p class="text-secondary mb-4">
-          Counting how many of the eight species appear in each area shows where
-          you could see the widest range of these birds – and where we simply
-          don't know.
+          Counting how many of the eight species appear in each area shows where you could see
+          the widest range of these birds – and where we simply don't know.
         </p>
 
         <div class="card map-card rounded-4 mb-3">
@@ -322,21 +209,10 @@
         <!-- findings below a wide chart: "what we see" left, "why" right -->
         <div class="row findings-row mb-5">
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>What we see.</strong> The darkest squares, where all eight
-              species were seen, cluster in the south-east. Large parts of
-              inland Australia are white, and the WA deserts produced only 145
-              sightings.
-            </p>
+            <p class="findings mb-0"><strong>What we see.</strong> The darkest squares, where all eight species were seen, cluster in the south-east. Large parts of inland Australia are white, and the WA deserts produced only 145 sightings.</p>
           </div>
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>Why.</strong> White does not mean no birds. It means no
-              one recorded them. Remote areas have few roads and few people, so
-              they are rarely surveyed. Diversity looks highest where observers
-              are most active, so the map reflects birdwatchers as much as
-              birds.
-            </p>
+            <p class="findings mb-0"><strong>Why.</strong> White does not mean no birds. It means no one recorded them. Remote areas have few roads and few people, so they are rarely surveyed. Diversity looks highest where observers are most active, so the map reflects birdwatchers as much as birds.</p>
           </div>
         </div>
 
@@ -348,21 +224,10 @@
         <!-- findings below a wide chart: "what we see" left, "why" right -->
         <div class="row findings-row mb-5">
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>What we see.</strong> The Magpie is the largest share of
-              sightings in most states. Queensland is led by the Rainbow
-              Lorikeet, Tasmania by the Superb Fairywren (41%), and the NT by
-              cockatoos (73%).
-            </p>
+            <p class="findings mb-0"><strong>What we see.</strong> The Magpie is the largest share of sightings in most states. Queensland is led by the Rainbow Lorikeet, Tasmania by the Superb Fairywren (41%), and the NT by cockatoos (73%).</p>
           </div>
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>Why.</strong> Each state's mix reflects both its birds and
-              its observers. Fairywrens do not live in WA or the NT, so they
-              score 0 there. In the NT, two thirds of sightings come from around
-              Darwin, where cockatoos are common, so a few observers in one city
-              shape the whole territory's figures.
-            </p>
+            <p class="findings mb-0"><strong>Why.</strong> Each state's mix reflects both its birds and its observers. Fairywrens do not live in WA or the NT, so they score 0 there. In the NT, two thirds of sightings come from around Darwin, where cockatoos are common, so a few observers in one city shape the whole territory's figures.</p>
           </div>
         </div>
 
@@ -374,20 +239,10 @@
         <!-- findings below a wide chart: "what we see" left, "why" right -->
         <div class="row findings-row mb-5">
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>What we see.</strong> The Wedge-tailed Eagle was seen in
-              1,338 map squares, the most of any bird, despite having over 10
-              times fewer sightings than the Magpie. The Superb Fairywren covers
-              the fewest squares (456).
-            </p>
+            <p class="findings mb-0"><strong>What we see.</strong> The Wedge-tailed Eagle was seen in 1,338 map squares, the most of any bird, despite having over 10 times fewer sightings than the Magpie. The Superb Fairywren covers the fewest squares (456).</p>
           </div>
           <div class="col-6">
-            <p class="findings mb-0">
-              <strong>Why.</strong> Eagles range over open country and are often
-              spotted from the road during long drives, so they are recorded in
-              many different places but only once or twice in each. Fairywrens
-              are reported often, but mostly in the same busy urban parks.
-            </p>
+            <p class="findings mb-0"><strong>Why.</strong> Eagles range over open country and are often spotted from the road during long drives, so they are recorded in many different places but only once or twice in each. Fairywrens are reported often, but mostly in the same busy urban parks.</p>
           </div>
         </div>
       </section>
@@ -396,15 +251,15 @@
       <section>
         <h2 class="fw-bold">About the data</h2>
         <p class="text-secondary">
-          Sightings come from the eBird Basic Dataset (Cornell Lab of
-          Ornithology) and research-grade iNaturalist observations, 1 January –
-          31 December 2025. "Sightings" means the number of records, not the
-          number of birds. Citizen science data reflects where people look for
-          birds, so remote areas are under-represented.
+          Sightings come from the eBird Basic Dataset (Cornell Lab of Ornithology) and
+          research-grade iNaturalist observations, 1 January – 31 December 2025.
+          "Sightings" means the number of records, not the number of birds.
+          Citizen science data reflects where people look for birds, so remote areas are
+          under-represented.
         </p>
         <p class="small text-secondary mb-0">
-          State boundaries: Australian Bureau of Statistics (2026), ASGS Edition
-          4, simplified and converted to TopoJSON with mapshaper.
+          State boundaries: Australian Bureau of Statistics (2026), ASGS Edition 4, simplified and
+          converted to TopoJSON with mapshaper.
         </p>
       </section>
     </main>
@@ -418,13 +273,13 @@
           background: null,
           font: "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
           title: {
-            fontSize: 18, // chart title: smaller than the section heading
+            fontSize: 18,             // chart title: smaller than the section heading
             fontWeight: "bold",
             color: "#212529",
-            subtitleFontSize: 13, // subtitle: smaller and grey
+            subtitleFontSize: 13,     // subtitle: smaller and grey
             subtitleColor: "#6c757d",
             subtitlePadding: 6,
-            offset: 14 // space between the title block and the chart
+            offset: 14                // space between the title block and the chart
           }
         }
       };
@@ -432,11 +287,7 @@
       vegaEmbed("#lollipop_chart", "idioms/lollipop_chart.vl.json", opts);
       vegaEmbed("#waffle_chart", "idioms/waffle_chart.vl.json", opts);
       vegaEmbed("#choropleth", "idioms/choropleth.vl.json", opts);
-      vegaEmbed(
-        "#proportional_symbol_map",
-        "idioms/proportional_symbol_map.vl.json",
-        opts
-      );
+      vegaEmbed("#proportional_symbol_map", "idioms/proportional_symbol_map.vl.json", opts);
       vegaEmbed("#line_chart", "idioms/line_chart.vl.json", opts);
       vegaEmbed("#season_line_chart", "idioms/season_line_chart.vl.json", opts);
       vegaEmbed("#bump_chart", "idioms/bump_chart.vl.json", opts);
