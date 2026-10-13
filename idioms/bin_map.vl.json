@@ -9,6 +9,10 @@
   "projection": {
     "type": "mercator"
   },
+  "view": {
+    "fill": "#ebe8e1",
+    "stroke": null
+  },
   "layer": [
     {
       "data": {
@@ -70,14 +74,14 @@
             ],
             "range": [
               "#ffffff",
-              "#dfdfed",
-              "#c7c8e1",
-              "#acaad1",
-              "#918ec2",
-              "#796eb2",
-              "#65489f",
-              "#51228d",
-              "#3f007d"
+              "#ccdff1",
+              "#add0e6",
+              "#82bbdb",
+              "#5aa2cf",
+              "#3787c0",
+              "#1c6ab0",
+              "#084d96",
+              "#08306b"
             ]
           },
           "title": "Species seen (of 8)",
@@ -126,6 +130,86 @@
         "fill": null,
         "stroke": "#555555",
         "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [
+                    121,
+                    -29
+                  ],
+                  [
+                    121,
+                    -20
+                  ],
+                  [
+                    129,
+                    -20
+                  ],
+                  [
+                    129,
+                    -29
+                  ],
+                  [
+                    121,
+                    -29
+                  ]
+                ]
+              ]
+            }
+          }
+        ],
+        "format": {
+          "type": "json"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#222222",
+        "strokeWidth": 1.2,
+        "strokeDash": [
+          4,
+          3
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#222222",
+        "lineHeight": 14
+      },
+      "encoding": {
+        "longitude": {
+          "datum": 125
+        },
+        "latitude": {
+          "datum": -25.2
+        },
+        "text": {
+          "value": [
+            "WA deserts:",
+            "only 145 sightings",
+            "\u2013 few observers,",
+            "not few birds"
+          ]
+        }
       }
     }
   ]

@@ -1,0 +1,97 @@
+Month_Num,Month,Species,Sightings,Rank
+1,Jan,Australian Magpie,22658,1
+1,Jan,Rainbow Lorikeet,15054,2
+1,Jan,Superb Fairywren,14729,3
+1,Jan,Sulphur-crested Cockatoo,11200,4
+1,Jan,Laughing Kookaburra,10795,5
+1,Jan,Wedge-tailed Eagle,1827,6
+1,Jan,Tawny Frogmouth,1524,7
+1,Jan,Emu,522,8
+2,Feb,Australian Magpie,18111,1
+2,Feb,Rainbow Lorikeet,12332,2
+2,Feb,Superb Fairywren,10496,3
+2,Feb,Sulphur-crested Cockatoo,8883,4
+2,Feb,Laughing Kookaburra,7834,5
+2,Feb,Wedge-tailed Eagle,1492,6
+2,Feb,Tawny Frogmouth,1166,7
+2,Feb,Emu,355,8
+3,Mar,Australian Magpie,19618,1
+3,Mar,Rainbow Lorikeet,13267,2
+3,Mar,Superb Fairywren,9726,3
+3,Mar,Sulphur-crested Cockatoo,9324,4
+3,Mar,Laughing Kookaburra,7612,5
+3,Mar,Wedge-tailed Eagle,1661,6
+3,Mar,Tawny Frogmouth,1280,7
+3,Mar,Emu,473,8
+4,Apr,Australian Magpie,21022,1
+4,Apr,Rainbow Lorikeet,14447,2
+4,Apr,Superb Fairywren,10608,3
+4,Apr,Sulphur-crested Cockatoo,9980,4
+4,Apr,Laughing Kookaburra,8125,5
+4,Apr,Wedge-tailed Eagle,2024,6
+4,Apr,Tawny Frogmouth,1344,7
+4,Apr,Emu,745,8
+5,May,Australian Magpie,18450,1
+5,May,Rainbow Lorikeet,13629,2
+5,May,Superb Fairywren,9393,3
+5,May,Sulphur-crested Cockatoo,8759,4
+5,May,Laughing Kookaburra,6906,5
+5,May,Wedge-tailed Eagle,1859,6
+5,May,Tawny Frogmouth,1203,7
+5,May,Emu,664,8
+6,Jun,Australian Magpie,18788,1
+6,Jun,Rainbow Lorikeet,13972,2
+6,Jun,Superb Fairywren,9057,3
+6,Jun,Sulphur-crested Cockatoo,8624,4
+6,Jun,Laughing Kookaburra,7623,5
+6,Jun,Wedge-tailed Eagle,1832,6
+6,Jun,Tawny Frogmouth,1373,7
+6,Jun,Emu,683,8
+7,Jul,Australian Magpie,19637,1
+7,Jul,Rainbow Lorikeet,14286,2
+7,Jul,Sulphur-crested Cockatoo,9655,3
+7,Jul,Superb Fairywren,9197,4
+7,Jul,Laughing Kookaburra,8876,5
+7,Jul,Wedge-tailed Eagle,1987,6
+7,Jul,Tawny Frogmouth,1524,7
+7,Jul,Emu,838,8
+8,Aug,Australian Magpie,21044,1
+8,Aug,Rainbow Lorikeet,15576,2
+8,Aug,Sulphur-crested Cockatoo,12052,3
+8,Aug,Laughing Kookaburra,11153,4
+8,Aug,Superb Fairywren,10937,5
+8,Aug,Wedge-tailed Eagle,1894,6
+8,Aug,Tawny Frogmouth,1623,7
+8,Aug,Emu,714,8
+9,Sep,Australian Magpie,23654,1
+9,Sep,Rainbow Lorikeet,16043,2
+9,Sep,Superb Fairywren,13380,3
+9,Sep,Sulphur-crested Cockatoo,13126,4
+9,Sep,Laughing Kookaburra,12358,5
+9,Sep,Wedge-tailed Eagle,1991,6
+9,Sep,Tawny Frogmouth,1801,7
+9,Sep,Emu,1058,8
+10,Oct,Australian Magpie,26210,1
+10,Oct,Rainbow Lorikeet,18054,2
+10,Oct,Superb Fairywren,15583,3
+10,Oct,Sulphur-crested Cockatoo,14909,4
+10,Oct,Laughing Kookaburra,12807,5
+10,Oct,Tawny Frogmouth,2521,6
+10,Oct,Wedge-tailed Eagle,2000,7
+10,Oct,Emu,1224,8
+11,Nov,Australian Magpie,22298,1
+11,Nov,Rainbow Lorikeet,15587,2
+11,Nov,Superb Fairywren,13344,3
+11,Nov,Sulphur-crested Cockatoo,11931,4
+11,Nov,Laughing Kookaburra,11606,5
+11,Nov,Tawny Frogmouth,2387,6
+11,Nov,Wedge-tailed Eagle,1644,7
+11,Nov,Emu,931,8
+12,Dec,Australian Magpie,21256,1
+12,Dec,Rainbow Lorikeet,15193,2
+12,Dec,Superb Fairywren,13456,3
+12,Dec,Sulphur-crested Cockatoo,11350,4
+12,Dec,Laughing Kookaburra,11076,5
+12,Dec,Tawny Frogmouth,1961,6
+12,Dec,Wedge-tailed Eagle,1638,7
+12,Dec,Emu,603,8

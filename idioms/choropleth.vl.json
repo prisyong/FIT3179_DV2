@@ -2,106 +2,164 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Where are birds reported most?",
-    "subtitle": "Citizen science sightings per 1,000 km\u00b2, 2025"
+    "subtitle": "Citizen science sightings per 1,000 km\u00b2, all 8 species, 2025"
   },
   "width": 520,
   "height": 450,
   "projection": {
     "type": "mercator"
   },
-  "params": [
+  "view": {
+    "fill": "#ebe8e1",
+    "stroke": null
+  },
+  "layer": [
     {
-      "name": "pick",
-      "value": "All species",
-      "bind": {
-        "input": "select",
-        "name": "Species: ",
-        "options": [
-          "All species",
-          "Australian Magpie",
-          "Emu",
-          "Laughing Kookaburra",
-          "Rainbow Lorikeet",
-          "Sulphur-crested Cockatoo",
-          "Superb Fairywren",
-          "Tawny Frogmouth",
-          "Wedge-tailed Eagle"
+      "data": {
+        "url": "data/choropleth_data.csv"
+      },
+      "transform": [
+        {
+          "lookup": "State",
+          "from": {
+            "data": {
+              "url": "data/australia_states.topojson",
+              "format": {
+                "type": "topojson",
+                "feature": "states"
+              }
+            },
+            "key": "properties.State"
+          },
+          "as": "geo"
+        },
+        {
+          "calculate": "max(datum.Per_1000km2, 0.01)",
+          "as": "Colour_Value"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "shape": {
+          "field": "geo",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "Colour_Value",
+          "type": "quantitative",
+          "scale": {
+            "type": "log",
+            "scheme": "blues"
+          },
+          "legend": {
+            "format": ",~g",
+            "gradientLength": 220
+          },
+          "title": "Sightings / 1,000 km\u00b2"
+        },
+        "tooltip": [
+          {
+            "field": "State"
+          },
+          {
+            "field": "Sightings",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Per_1000km2",
+            "type": "quantitative",
+            "title": "Per 1,000 km\u00b2",
+            "format": ",.1f"
+          },
+          {
+            "field": "Observers",
+            "type": "quantitative",
+            "format": ","
+          }
         ]
       }
-    }
-  ],
-  "data": {
-    "url": "data/choropleth_data.csv"
-  },
-  "transform": [
-    {
-      "filter": "datum.Species == pick"
     },
     {
-      "lookup": "State",
-      "from": {
-        "data": {
-          "url": "data/australia_states.topojson",
-          "format": {
-            "type": "topojson",
-            "feature": "states"
-          }
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#222222",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "datum": 150.5
         },
-        "key": "properties.State"
-      },
-      "as": "geo"
+        "latitude": {
+          "datum": -41.5
+        },
+        "longitude2": {
+          "datum": 149.0
+        },
+        "latitude2": {
+          "datum": -35.5
+        }
+      }
     },
     {
-      "calculate": "max(datum.Per_1000km2, 0.01)",
-      "as": "Colour_Value"
-    }
-  ],
-  "mark": {
-    "type": "geoshape",
-    "stroke": "white",
-    "strokeWidth": 1.2
-  },
-  "encoding": {
-    "shape": {
-      "field": "geo",
-      "type": "geojson"
-    },
-    "color": {
-      "field": "Colour_Value",
-      "type": "quantitative",
-      "scale": {
-        "type": "log",
-        "scheme": "greens"
+      "data": {
+        "values": [
+          {}
+        ]
       },
-      "legend": {
-        "format": ",~g",
-        "gradientLength": 220
+      "mark": {
+        "type": "circle",
+        "size": 30,
+        "color": "#222222",
+        "opacity": 1
       },
-      "title": "Sightings / 1,000 km\u00b2"
-    },
-    "tooltip": [
-      {
-        "field": "State"
-      },
-      {
-        "field": "Species"
-      },
-      {
-        "field": "Sightings",
-        "type": "quantitative",
-        "format": ","
-      },
-      {
-        "field": "Per_1000km2",
-        "type": "quantitative",
-        "title": "Per 1,000 km\u00b2",
-        "format": ",.1f"
-      },
-      {
-        "field": "Observers",
-        "type": "quantitative",
-        "format": ","
+      "encoding": {
+        "longitude": {
+          "datum": 149.0
+        },
+        "latitude": {
+          "datum": -35.5
+        }
       }
-    ]
-  }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#222222",
+        "lineHeight": 14,
+        "dy": 4
+      },
+      "encoding": {
+        "longitude": {
+          "datum": 150.5
+        },
+        "latitude": {
+          "datum": -41.5
+        },
+        "text": {
+          "value": [
+            "ACT: 19,111 sightings per 1,000 km\u00b2",
+            "16\u00d7 Victoria, the next highest"
+          ]
+        }
+      }
+    }
+  ]
 }

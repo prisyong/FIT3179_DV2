@@ -1,0 +1,151 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Which birds are the most widespread?",
+    "subtitle": "Number of ~50 km map squares (same grid as the bin map) each species was seen in, 2025. Each icon = 50 squares"
+  },
+  "width": 660,
+  "height": {
+    "step": 36
+  },
+  "encoding": {
+    "y": {
+      "field": "Species",
+      "type": "nominal",
+      "sort": [
+        "Wedge-tailed Eagle",
+        "Australian Magpie",
+        "Emu",
+        "Sulphur-crested Cockatoo",
+        "Laughing Kookaburra",
+        "Tawny Frogmouth",
+        "Rainbow Lorikeet",
+        "Superb Fairywren"
+      ],
+      "title": null,
+      "axis": {
+        "labelFontSize": 11,
+        "ticks": false,
+        "domain": false,
+        "labelPadding": 8
+      }
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/pictogram_data.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Icon_Number": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "image",
+        "width": 24,
+        "height": 24
+      },
+      "encoding": {
+        "x": {
+          "field": "Icon_Number",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.5,
+              27.5
+            ]
+          },
+          "axis": null
+        },
+        "url": {
+          "field": "Icon",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "Species"
+          },
+          {
+            "field": "Squares",
+            "type": "quantitative",
+            "format": ",",
+            "title": "Squares seen in"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/pictogram_totals.csv"
+      },
+      "transform": [
+        {
+          "calculate": "round(datum.Squares / 50) - 0.4",
+          "as": "Label_X"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "color": "#444444"
+      },
+      "encoding": {
+        "x": {
+          "field": "Label_X",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.5,
+              27.5
+            ]
+          }
+        },
+        "text": {
+          "field": "Squares",
+          "type": "quantitative",
+          "format": ","
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Species": "Rainbow Lorikeet",
+            "x": 13.2
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#222222",
+        "lineHeight": 15,
+        "dy": 10
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              -0.5,
+              27.5
+            ]
+          }
+        },
+        "text": {
+          "value": [
+            "\u2191 Wedge-tailed Eagle (top row) is seen in the most places,",
+            "  despite over 10\u00d7 fewer sightings than the Magpie"
+          ]
+        }
+      }
+    }
+  ]
+}

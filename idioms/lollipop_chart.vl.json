@@ -1,0 +1,162 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Which birds are reported most?",
+    "subtitle": "Total sightings per species, 2025"
+  },
+  "width": 230,
+  "height": 260,
+  "data": {
+    "url": "data/lollipop_chart_data.csv"
+  },
+  "encoding": {
+    "y": {
+      "field": "Species",
+      "type": "nominal",
+      "sort": [
+        "Australian Magpie",
+        "Rainbow Lorikeet",
+        "Superb Fairywren",
+        "Sulphur-crested Cockatoo",
+        "Laughing Kookaburra",
+        "Wedge-tailed Eagle",
+        "Tawny Frogmouth",
+        "Emu"
+      ],
+      "title": null,
+      "axis": {
+        "ticks": false,
+        "domain": false
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 2,
+        "color": "#bbbbbb"
+      },
+      "encoding": {
+        "x": {
+          "field": "Zero",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "Sightings"
+        }
+      },
+      "transform": [
+        {
+          "calculate": "0",
+          "as": "Zero"
+        }
+      ]
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 160,
+        "opacity": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "Sightings",
+          "type": "quantitative",
+          "title": "Sightings",
+          "axis": {
+            "format": "~s"
+          }
+        },
+        "color": {
+          "field": "Species",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Australian Magpie",
+              "Rainbow Lorikeet",
+              "Superb Fairywren",
+              "Sulphur-crested Cockatoo",
+              "Laughing Kookaburra",
+              "Wedge-tailed Eagle",
+              "Tawny Frogmouth",
+              "Emu"
+            ],
+            "range": [
+              "#4c78a8",
+              "#f58518",
+              "#54a24b",
+              "#e45756",
+              "#72b7b2",
+              "#b279a2",
+              "#9d755d",
+              "#eeca3b"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "Species"
+          },
+          {
+            "field": "Sightings",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Observers",
+            "type": "quantitative",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 10,
+        "fontSize": 10,
+        "color": "#444444"
+      },
+      "encoding": {
+        "x": {
+          "field": "Sightings",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "Sightings",
+          "type": "quantitative",
+          "format": ","
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Species": "Emu",
+            "x": 62000
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#222222"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "\u2190 Magpies: 29\u00d7 more than Emus"
+        }
+      }
+    }
+  ]
+}

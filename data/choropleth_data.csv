@@ -1,73 +1,9 @@
-State,Species,Sightings,Observers,Area_km2,Per_1000km2
-New South Wales,All species,265388,8693,800642,331.47
-New South Wales,Australian Magpie,70519,5509,800642,88.08
-New South Wales,Emu,2296,954,800642,2.87
-New South Wales,Laughing Kookaburra,41395,5147,800642,51.7
-New South Wales,Rainbow Lorikeet,55647,4663,800642,69.5
-New South Wales,Sulphur-crested Cockatoo,40010,4599,800642,49.97
-New South Wales,Superb Fairywren,45137,4279,800642,56.38
-New South Wales,Tawny Frogmouth,5445,1670,800642,6.8
-New South Wales,Wedge-tailed Eagle,4939,1625,800642,6.17
-Victoria,All species,269513,7503,227444,1184.96
-Victoria,Australian Magpie,87966,4995,227444,386.76
-Victoria,Emu,2095,1097,227444,9.21
-Victoria,Laughing Kookaburra,25116,3602,227444,110.43
-Victoria,Rainbow Lorikeet,49659,3808,227444,218.34
-Victoria,Sulphur-crested Cockatoo,37227,3635,227444,163.68
-Victoria,Superb Fairywren,53763,4231,227444,236.38
-Victoria,Tawny Frogmouth,6923,1747,227444,30.44
-Victoria,Wedge-tailed Eagle,6764,1829,227444,29.74
-Queensland,All species,182569,6980,1730648,105.49
-Queensland,Australian Magpie,44144,3921,1730648,25.51
-Queensland,Emu,1512,658,1730648,0.87
-Queensland,Laughing Kookaburra,33403,4364,1730648,19.3
-Queensland,Rainbow Lorikeet,52336,4432,1730648,30.24
-Queensland,Sulphur-crested Cockatoo,29716,3744,1730648,17.17
-Queensland,Superb Fairywren,13282,2050,1730648,7.67
-Queensland,Tawny Frogmouth,4663,1878,1730648,2.69
-Queensland,Wedge-tailed Eagle,3513,1274,1730648,2.03
-South Australia,All species,36877,2291,984321,37.46
-South Australia,Australian Magpie,12755,1556,984321,12.96
-South Australia,Emu,1479,641,984321,1.5
-South Australia,Laughing Kookaburra,2837,811,984321,2.88
-South Australia,Rainbow Lorikeet,7204,1124,984321,7.32
-South Australia,Sulphur-crested Cockatoo,3515,777,984321,3.57
-South Australia,Superb Fairywren,7102,1138,984321,7.22
-South Australia,Tawny Frogmouth,441,247,984321,0.45
-South Australia,Wedge-tailed Eagle,1544,620,984321,1.57
-Western Australia,All species,34353,2469,2527013,13.59
-Western Australia,Australian Magpie,14964,1781,2527013,5.92
-Western Australia,Emu,1278,641,2527013,0.51
-Western Australia,Laughing Kookaburra,6646,1399,2527013,2.63
-Western Australia,Rainbow Lorikeet,8161,1240,2527013,3.23
-Western Australia,Sulphur-crested Cockatoo,215,106,2527013,0.09
-Western Australia,Superb Fairywren,0,0,2527013,0.0
-Western Australia,Tawny Frogmouth,1165,540,2527013,0.46
-Western Australia,Wedge-tailed Eagle,1924,692,2527013,0.76
-Tasmania,All species,28282,1837,68401,413.47
-Tasmania,Australian Magpie,5788,911,68401,84.62
-Tasmania,Emu,2,2,68401,0.03
-Tasmania,Laughing Kookaburra,4412,955,68401,64.5
-Tasmania,Rainbow Lorikeet,984,258,68401,14.39
-Tasmania,Sulphur-crested Cockatoo,3414,685,68401,49.91
-Tasmania,Superb Fairywren,11489,1435,68401,167.97
-Tasmania,Tawny Frogmouth,407,249,68401,5.95
-Tasmania,Wedge-tailed Eagle,1786,602,68401,26.11
-Northern Territory,All species,4976,860,1347791,3.69
-Northern Territory,Australian Magpie,504,250,1347791,0.37
-Northern Territory,Emu,61,60,1347791,0.05
-Northern Territory,Laughing Kookaburra,0,0,1347791,0.0
-Northern Territory,Rainbow Lorikeet,1,1,1347791,0.0
-Northern Territory,Sulphur-crested Cockatoo,3617,625,1347791,2.68
-Northern Territory,Superb Fairywren,0,0,1347791,0.0
-Northern Territory,Tawny Frogmouth,262,156,1347791,0.19
-Northern Territory,Wedge-tailed Eagle,531,258,1347791,0.39
-Australian Capital Territory,All species,45064,1277,2358,19111.11
-Australian Capital Territory,Australian Magpie,16106,982,2358,6830.36
-Australian Capital Territory,Emu,87,70,2358,36.9
-Australian Capital Territory,Laughing Kookaburra,2962,508,2358,1256.15
-Australian Capital Territory,Rainbow Lorikeet,3448,315,2358,1462.26
-Australian Capital Territory,Sulphur-crested Cockatoo,12079,883,2358,5122.56
-Australian Capital Territory,Superb Fairywren,9133,898,2358,3873.2
-Australian Capital Territory,Tawny Frogmouth,401,172,2358,170.06
-Australian Capital Territory,Wedge-tailed Eagle,848,254,2358,359.63
+State,Sightings,Observers,Area_km2,Per_1000km2
+Australian Capital Territory,45064,1277,2358,19111.11
+New South Wales,265388,8693,800642,331.47
+Northern Territory,4976,860,1347791,3.69
+Queensland,182569,6980,1730648,105.49
+South Australia,36877,2291,984321,37.46
+Tasmania,28282,1837,68401,413.47
+Victoria,269513,7503,227444,1184.96
+Western Australia,34353,2469,2527013,13.59

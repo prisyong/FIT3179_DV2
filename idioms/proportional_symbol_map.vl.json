@@ -2,12 +2,19 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Where are the sighting hotspots?",
-    "subtitle": "50 busiest ~100 km areas for the chosen species, circle area = number of sightings, 2025"
+    "subtitle": [
+      "50 busiest ~100 km areas for the chosen species, circle area = number of sightings, 2025",
+      "Annotation shown for All species"
+    ]
   },
   "width": 520,
   "height": 450,
   "projection": {
     "type": "mercator"
+  },
+  "view": {
+    "fill": "#ebe8e1",
+    "stroke": null
   },
   "params": [
     {
@@ -65,7 +72,7 @@
       ],
       "mark": {
         "type": "circle",
-        "color": "#d95f0e",
+        "color": "#2171b5",
         "opacity": 0.55,
         "stroke": "#ffffff",
         "strokeWidth": 0.6
@@ -93,7 +100,7 @@
           "legend": {
             "title": "Sightings",
             "format": ",.0f",
-            "symbolFillColor": "#d95f0e",
+            "symbolFillColor": "#2171b5",
             "symbolOpacity": 0.55,
             "symbolStrokeColor": "#ffffff",
             "formatType": "number",
@@ -124,6 +131,98 @@
             "format": ".2f"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "transform": [
+        {
+          "filter": "pick == 'All species'"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#222222",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "datum": 142.2
+        },
+        "latitude": {
+          "datum": -39.4
+        },
+        "longitude2": {
+          "datum": 145.5
+        },
+        "latitude2": {
+          "datum": -37.5
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "transform": [
+        {
+          "filter": "pick == 'All species'"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "size": 30,
+        "color": "#222222",
+        "opacity": 1
+      },
+      "encoding": {
+        "longitude": {
+          "datum": 145.5
+        },
+        "latitude": {
+          "datum": -37.5
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {}
+        ]
+      },
+      "transform": [
+        {
+          "filter": "pick == 'All species'"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#222222",
+        "lineHeight": 14,
+        "dy": 4
+      },
+      "encoding": {
+        "longitude": {
+          "datum": 141.8
+        },
+        "latitude": {
+          "datum": -39.4
+        },
+        "text": {
+          "value": [
+            "Greater Melbourne: 81,410 sightings",
+            "the busiest area in Australia"
+          ]
+        }
       }
     }
   ]

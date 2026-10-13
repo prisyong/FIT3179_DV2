@@ -1,0 +1,124 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Each species' share of all sightings",
+    "subtitle": "Each square = 1% of the 867,022 sightings in 2025"
+  },
+  "width": 230,
+  "height": 230,
+  "layer": [
+    {
+      "data": {
+        "url": "data/waffle_chart_data.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Row": "number",
+            "Col": "number"
+          }
+        }
+      },
+      "mark": {
+        "type": "rect",
+        "stroke": "#ffffff",
+        "strokeWidth": 3,
+        "cornerRadius": 3
+      },
+      "encoding": {
+        "x": {
+          "field": "Col",
+          "type": "ordinal",
+          "axis": null
+        },
+        "y": {
+          "field": "Row",
+          "type": "ordinal",
+          "axis": null
+        },
+        "color": {
+          "field": "Species",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Australian Magpie",
+              "Rainbow Lorikeet",
+              "Superb Fairywren",
+              "Sulphur-crested Cockatoo",
+              "Laughing Kookaburra",
+              "Wedge-tailed Eagle",
+              "Tawny Frogmouth",
+              "Emu"
+            ],
+            "range": [
+              "#4c78a8",
+              "#f58518",
+              "#54a24b",
+              "#e45756",
+              "#72b7b2",
+              "#b279a2",
+              "#9d755d",
+              "#eeca3b"
+            ]
+          },
+          "title": "Species",
+          "legend": {
+            "orient": "bottom",
+            "columns": 2,
+            "title": null,
+            "labelFontSize": 10,
+            "symbolSize": 80
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Species"
+          },
+          {
+            "field": "Squares",
+            "title": "Squares (%)"
+          },
+          {
+            "field": "Share_Pct",
+            "title": "Exact share (%)"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Col": 9,
+            "Row": 9
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#222222",
+        "lineHeight": 15,
+        "dx": 24,
+        "dy": -4
+      },
+      "encoding": {
+        "x": {
+          "field": "Col",
+          "type": "ordinal"
+        },
+        "y": {
+          "field": "Row",
+          "type": "ordinal"
+        },
+        "text": {
+          "value": [
+            "\u2190 The Emu: 1 square.",
+            "The Magpie fills 29."
+          ]
+        }
+      }
+    }
+  ]
+}
