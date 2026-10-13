@@ -1,0 +1,130 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where are the sighting hotspots?",
+    "subtitle": "50 busiest ~100 km areas for the chosen species, circle area = number of sightings, 2025"
+  },
+  "width": 520,
+  "height": 450,
+  "projection": {
+    "type": "mercator"
+  },
+  "params": [
+    {
+      "name": "pick",
+      "value": "All species",
+      "bind": {
+        "input": "select",
+        "name": "Species: ",
+        "options": [
+          "All species",
+          "Australian Magpie",
+          "Emu",
+          "Laughing Kookaburra",
+          "Rainbow Lorikeet",
+          "Sulphur-crested Cockatoo",
+          "Superb Fairywren",
+          "Tawny Frogmouth",
+          "Wedge-tailed Eagle"
+        ]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ffffff",
+        "stroke": "#999999",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "data/proportional_symbol_map_data.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Latitude": "number",
+            "Longitude": "number",
+            "Sightings": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "filter": "datum.Species == pick"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "color": "#d95f0e",
+        "opacity": 0.55,
+        "stroke": "#ffffff",
+        "strokeWidth": 0.6
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "Sightings",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              6,
+              900
+            ],
+            "zero": false,
+            "domainMin": 1
+          },
+          "legend": {
+            "title": "Sightings",
+            "format": ",.0f",
+            "symbolFillColor": "#d95f0e",
+            "symbolOpacity": 0.55,
+            "symbolStrokeColor": "#ffffff",
+            "formatType": "number",
+            "labelLimit": 120
+          }
+        },
+        "order": {
+          "field": "Sightings",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "Species"
+          },
+          {
+            "field": "Sightings",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Latitude",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "Longitude",
+            "type": "quantitative",
+            "format": ".2f"
+          }
+        ]
+      }
+    }
+  ]
+}

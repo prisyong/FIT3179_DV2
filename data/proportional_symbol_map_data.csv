@@ -1,0 +1,451 @@
+Latitude,Longitude,Sightings,Species
+-37.5,145.5,81410,All species
+-33.5,151.5,67837,All species
+-37.5,144.5,50796,All species
+-27.5,152.5,48617,All species
+-27.5,153.5,47729,All species
+-35.5,149.5,45387,All species
+-33.5,150.5,32422,All species
+-34.5,150.5,31097,All species
+-37.5,145.5,23041,Australian Magpie
+-38.5,144.5,22826,All species
+-38.5,145.5,21088,All species
+-33.5,151.5,20339,Rainbow Lorikeet
+-37.5,145.5,19596,Rainbow Lorikeet
+-32.5,151.5,17754,All species
+-35.5,149.5,16729,Australian Magpie
+-37.5,144.5,16146,Australian Magpie
+-33.5,151.5,15590,Australian Magpie
+-28.5,153.5,15426,All species
+-27.5,153.5,15132,Rainbow Lorikeet
+-27.5,153.5,14545,Australian Magpie
+-37.5,145.5,14163,Sulphur-crested Cockatoo
+-35.5,138.5,13598,All species
+-36.5,146.5,13057,All species
+-27.5,152.5,12534,Rainbow Lorikeet
+-16.5,145.5,12436,All species
+-37.5,144.5,12371,Rainbow Lorikeet
+-31.5,115.5,12061,All species
+-36.5,141.5,11997,All species
+-35.5,149.5,11892,Sulphur-crested Cockatoo
+-37.5,144.5,11649,Superb Fairywren
+-33.5,151.5,11488,Sulphur-crested Cockatoo
+-31.5,152.5,11352,All species
+-27.5,152.5,11278,Australian Magpie
+-34.5,138.5,11100,All species
+-33.5,151.5,11000,Laughing Kookaburra
+-37.5,145.5,10048,Superb Fairywren
+-36.5,144.5,9968,All species
+-27.5,152.5,9767,Laughing Kookaburra
+-37.5,145.5,9463,Laughing Kookaburra
+-37.5,143.5,9314,All species
+-42.5,147.5,9268,All species
+-35.5,149.5,9074,Superb Fairywren
+-27.5,152.5,8986,Sulphur-crested Cockatoo
+-36.5,145.5,8894,All species
+-26.5,152.5,8676,All species
+-27.5,153.5,8105,Laughing Kookaburra
+-34.5,150.5,8059,Australian Magpie
+-33.5,151.5,7838,Superb Fairywren
+-38.5,144.5,7742,Australian Magpie
+-33.5,150.5,7722,Australian Magpie
+-32.5,115.5,7702,All species
+-17.5,145.5,7353,All species
+-33.5,150.5,6796,Rainbow Lorikeet
+-38.5,145.5,6762,Australian Magpie
+-35.5,150.5,6497,All species
+-38.5,144.5,6433,Superb Fairywren
+-34.5,150.5,6416,Rainbow Lorikeet
+-36.5,141.5,6411,Australian Magpie
+-33.5,150.5,6375,Sulphur-crested Cockatoo
+-33.5,150.5,5987,Superb Fairywren
+-43.5,147.5,5959,All species
+-33.5,149.5,5923,All species
+-34.5,151.5,5912,All species
+-37.5,144.5,5880,Sulphur-crested Cockatoo
+-34.5,150.5,5869,Sulphur-crested Cockatoo
+-16.5,145.5,5807,Rainbow Lorikeet
+-26.5,153.5,5663,All species
+-28.5,151.5,5616,All species
+-35.5,148.5,5514,All species
+-34.5,150.5,5439,Superb Fairywren
+-38.5,146.5,5201,All species
+-38.5,143.5,5121,All species
+-19.5,146.5,5093,All species
+-38.5,145.5,4877,Superb Fairywren
+-31.5,115.5,4867,Rainbow Lorikeet
+-27.5,151.5,4705,All species
+-33.5,150.5,4646,Laughing Kookaburra
+-34.5,150.5,4489,Laughing Kookaburra
+-38.5,145.5,4455,Rainbow Lorikeet
+-32.5,151.5,4450,Australian Magpie
+-31.5,115.5,4341,Australian Magpie
+-29.5,151.5,4304,All species
+-27.5,152.5,4251,Superb Fairywren
+-30.5,153.5,4239,All species
+-34.5,149.5,4202,All species
+-27.5,153.5,4158,Superb Fairywren
+-36.5,146.5,4112,Australian Magpie
+-30.5,152.5,4100,All species
+-16.5,145.5,4095,Sulphur-crested Cockatoo
+-28.5,153.5,4076,Australian Magpie
+-35.5,138.5,4054,Australian Magpie
+-37.5,147.5,3971,All species
+-32.5,151.5,3969,Rainbow Lorikeet
+-37.5,145.5,3929,Tawny Frogmouth
+-41.5,147.5,3870,All species
+-30.5,151.5,3794,All species
+-38.5,144.5,3787,Rainbow Lorikeet
+-36.5,144.5,3714,Australian Magpie
+-28.5,153.5,3714,Rainbow Lorikeet
+-27.5,153.5,3697,Sulphur-crested Cockatoo
+-36.5,146.5,3694,Superb Fairywren
+-34.5,138.5,3576,Australian Magpie
+-35.5,149.5,3522,Rainbow Lorikeet
+-35.5,147.5,3367,All species
+-32.5,148.5,3347,All species
+-34.5,148.5,3336,All species
+-32.5,115.5,3268,Australian Magpie
+-37.5,142.5,3259,All species
+-43.5,147.5,3220,Superb Fairywren
+-28.5,153.5,3212,Laughing Kookaburra
+-34.5,142.5,3208,All species
+-35.5,138.5,3187,Rainbow Lorikeet
+-37.5,143.5,3182,Australian Magpie
+-38.5,142.5,3160,All species
+-31.5,152.5,3112,Rainbow Lorikeet
+-32.5,151.5,3079,Superb Fairywren
+-34.5,138.5,3073,Rainbow Lorikeet
+-35.5,138.5,3048,Superb Fairywren
+-32.5,115.5,2949,Rainbow Lorikeet
+-38.5,144.5,2947,Sulphur-crested Cockatoo
+-31.5,152.5,2938,Australian Magpie
+-42.5,147.5,2848,Superb Fairywren
+-35.5,149.5,2819,Laughing Kookaburra
+-36.5,145.5,2781,Australian Magpie
+-17.5,145.5,2729,Sulphur-crested Cockatoo
+-31.5,152.5,2692,Laughing Kookaburra
+-26.5,152.5,2541,Rainbow Lorikeet
+-36.5,144.5,2514,Superb Fairywren
+-37.5,143.5,2385,Superb Fairywren
+-32.5,151.5,2380,Laughing Kookaburra
+-31.5,115.5,2340,Laughing Kookaburra
+-36.5,141.5,2339,Rainbow Lorikeet
+-33.5,149.5,2327,Australian Magpie
+-17.5,145.5,2288,Rainbow Lorikeet
+-37.5,144.5,2242,Laughing Kookaburra
+-42.5,147.5,2187,Australian Magpie
+-36.5,146.5,2184,Sulphur-crested Cockatoo
+-26.5,152.5,2181,Laughing Kookaburra
+-26.5,152.5,2143,Australian Magpie
+-16.5,145.5,2094,Laughing Kookaburra
+-19.5,146.5,2091,Rainbow Lorikeet
+-28.5,153.5,2086,Superb Fairywren
+-36.5,146.5,2082,Laughing Kookaburra
+-42.5,147.5,2045,Sulphur-crested Cockatoo
+-38.5,145.5,2040,Laughing Kookaburra
+-26.5,153.5,1997,Australian Magpie
+-27.5,153.5,1985,Tawny Frogmouth
+-36.5,145.5,1973,Sulphur-crested Cockatoo
+-32.5,151.5,1967,Sulphur-crested Cockatoo
+-26.5,153.5,1935,Rainbow Lorikeet
+-35.5,150.5,1885,Rainbow Lorikeet
+-38.5,145.5,1864,Sulphur-crested Cockatoo
+-38.5,146.5,1855,Australian Magpie
+-31.5,152.5,1823,Superb Fairywren
+-17.5,145.5,1763,Laughing Kookaburra
+-33.5,149.5,1705,Superb Fairywren
+-38.5,143.5,1702,Superb Fairywren
+-28.5,151.5,1672,Superb Fairywren
+-34.5,138.5,1663,Superb Fairywren
+-32.5,151.5,1650,Tawny Frogmouth
+-34.5,149.5,1643,Australian Magpie
+-35.5,138.5,1642,Sulphur-crested Cockatoo
+-28.5,153.5,1619,Sulphur-crested Cockatoo
+-12.5,130.5,1605,Sulphur-crested Cockatoo
+-30.5,151.5,1568,Australian Magpie
+-38.5,143.5,1557,Australian Magpie
+-28.5,151.5,1537,Australian Magpie
+-37.5,143.5,1514,Rainbow Lorikeet
+-38.5,142.5,1486,Australian Magpie
+-35.5,148.5,1473,Superb Fairywren
+-37.5,144.5,1452,Tawny Frogmouth
+-34.5,138.5,1428,Sulphur-crested Cockatoo
+-41.5,147.5,1400,Superb Fairywren
+-35.5,150.5,1400,Australian Magpie
+-33.5,151.5,1399,Tawny Frogmouth
+-26.5,152.5,1392,Sulphur-crested Cockatoo
+-35.5,148.5,1389,Australian Magpie
+-32.5,116.5,1376,Australian Magpie
+-36.5,145.5,1372,Rainbow Lorikeet
+-35.5,148.5,1372,Sulphur-crested Cockatoo
+-30.5,153.5,1367,Rainbow Lorikeet
+-38.5,146.5,1358,Superb Fairywren
+-36.5,145.5,1356,Superb Fairywren
+-27.5,151.5,1354,Australian Magpie
+-34.5,151.5,1347,Sulphur-crested Cockatoo
+-34.5,151.5,1341,Rainbow Lorikeet
+-35.5,150.5,1331,Laughing Kookaburra
+-35.5,150.5,1317,Superb Fairywren
+-34.5,148.5,1308,Australian Magpie
+-36.5,144.5,1254,Sulphur-crested Cockatoo
+-41.5,146.5,1211,Superb Fairywren
+-35.5,138.5,1200,Laughing Kookaburra
+-26.5,153.5,1200,Laughing Kookaburra
+-42.5,147.5,1197,Laughing Kookaburra
+-34.5,151.5,1162,Australian Magpie
+-29.5,151.5,1143,Australian Magpie
+-37.5,145.5,1143,Wedge-tailed Eagle
+-19.5,146.5,1138,Sulphur-crested Cockatoo
+-36.5,141.5,1128,Sulphur-crested Cockatoo
+-36.5,141.5,1126,Superb Fairywren
+-36.5,145.5,1121,Laughing Kookaburra
+-33.5,115.5,1118,Australian Magpie
+-27.5,152.5,1106,Tawny Frogmouth
+-34.5,151.5,1087,Laughing Kookaburra
+-19.5,146.5,1075,Australian Magpie
+-32.5,115.5,1075,Laughing Kookaburra
+-30.5,153.5,1073,Australian Magpie
+-35.5,147.5,1063,Australian Magpie
+-37.5,147.5,1046,Australian Magpie
+-37.5,143.5,1040,Sulphur-crested Cockatoo
+-37.5,144.5,1032,Wedge-tailed Eagle
+-24.5,152.5,1029,Australian Magpie
+-30.5,152.5,1022,Laughing Kookaburra
+-41.5,147.5,1016,Australian Magpie
+-34.5,142.5,1015,Australian Magpie
+-33.5,148.5,999,Australian Magpie
+-27.5,151.5,998,Superb Fairywren
+-37.5,142.5,998,Australian Magpie
+-29.5,151.5,996,Superb Fairywren
+-38.5,142.5,985,Superb Fairywren
+-30.5,153.5,980,Laughing Kookaburra
+-36.5,143.5,969,Australian Magpie
+-32.5,148.5,963,Superb Fairywren
+-36.5,144.5,963,Rainbow Lorikeet
+-43.5,147.5,961,Laughing Kookaburra
+-34.5,138.5,950,Laughing Kookaburra
+-35.5,149.5,938,Wedge-tailed Eagle
+-24.5,152.5,927,Rainbow Lorikeet
+-34.5,149.5,924,Superb Fairywren
+-30.5,152.5,922,Rainbow Lorikeet
+-32.5,152.5,919,Rainbow Lorikeet
+-28.5,151.5,909,Laughing Kookaburra
+-34.5,151.5,900,Superb Fairywren
+-37.5,149.5,894,Superb Fairywren
+-30.5,151.5,894,Superb Fairywren
+-36.5,144.5,883,Laughing Kookaburra
+-34.5,149.5,866,Sulphur-crested Cockatoo
+-35.5,148.5,860,Laughing Kookaburra
+-37.5,147.5,850,Superb Fairywren
+-36.5,141.5,836,Laughing Kookaburra
+-38.5,144.5,829,Laughing Kookaburra
+-38.5,143.5,821,Sulphur-crested Cockatoo
+-33.5,149.5,809,Sulphur-crested Cockatoo
+-34.5,148.5,808,Sulphur-crested Cockatoo
+-35.5,147.5,790,Sulphur-crested Cockatoo
+-32.5,116.5,782,Laughing Kookaburra
+-29.5,151.5,773,Sulphur-crested Cockatoo
+-25.5,152.5,759,Rainbow Lorikeet
+-38.5,146.5,754,Laughing Kookaburra
+-27.5,151.5,743,Sulphur-crested Cockatoo
+-33.5,148.5,736,Superb Fairywren
+-32.5,152.5,735,Laughing Kookaburra
+-37.5,142.5,723,Superb Fairywren
+-37.5,143.5,722,Laughing Kookaburra
+-34.5,148.5,721,Superb Fairywren
+-27.5,151.5,713,Rainbow Lorikeet
+-30.5,152.5,710,Superb Fairywren
+-35.5,147.5,698,Superb Fairywren
+-27.5,152.5,695,Wedge-tailed Eagle
+-27.5,151.5,684,Laughing Kookaburra
+-29.5,151.5,679,Rainbow Lorikeet
+-30.5,151.5,672,Rainbow Lorikeet
+-38.5,145.5,650,Wedge-tailed Eagle
+-38.5,143.5,638,Laughing Kookaburra
+-32.5,148.5,632,Sulphur-crested Cockatoo
+-37.5,147.5,628,Rainbow Lorikeet
+-33.5,115.5,619,Laughing Kookaburra
+-30.5,153.5,616,Superb Fairywren
+-37.5,147.5,608,Laughing Kookaburra
+-38.5,141.5,607,Superb Fairywren
+-37.5,142.5,604,Sulphur-crested Cockatoo
+-38.5,144.5,602,Wedge-tailed Eagle
+-35.5,144.5,602,Superb Fairywren
+-34.5,142.5,598,Sulphur-crested Cockatoo
+-37.5,147.5,596,Sulphur-crested Cockatoo
+-41.5,147.5,584,Sulphur-crested Cockatoo
+-33.5,149.5,582,Laughing Kookaburra
+-23.5,150.5,581,Rainbow Lorikeet
+-37.5,149.5,580,Rainbow Lorikeet
+-28.5,151.5,579,Rainbow Lorikeet
+-12.5,132.5,574,Sulphur-crested Cockatoo
+-36.5,149.5,570,Superb Fairywren
+-36.5,143.5,570,Superb Fairywren
+-34.5,116.5,539,Laughing Kookaburra
+-19.5,146.5,534,Laughing Kookaburra
+-29.5,151.5,532,Laughing Kookaburra
+-41.5,146.5,528,Laughing Kookaburra
+-36.5,144.5,521,Wedge-tailed Eagle
+-33.5,148.5,520,Sulphur-crested Cockatoo
+-24.5,152.5,514,Laughing Kookaburra
+-37.5,148.5,510,Superb Fairywren
+-34.5,142.5,503,Emu
+-36.5,146.5,498,Rainbow Lorikeet
+-28.5,151.5,492,Sulphur-crested Cockatoo
+-41.5,147.5,486,Laughing Kookaburra
+-35.5,150.5,469,Sulphur-crested Cockatoo
+-36.5,150.5,467,Rainbow Lorikeet
+-29.5,153.5,466,Rainbow Lorikeet
+-34.5,149.5,461,Laughing Kookaburra
+-35.5,147.5,458,Laughing Kookaburra
+-38.5,146.5,447,Rainbow Lorikeet
+-34.5,150.5,442,Tawny Frogmouth
+-28.5,152.5,441,Rainbow Lorikeet
+-12.5,131.5,436,Sulphur-crested Cockatoo
+-33.5,150.5,425,Wedge-tailed Eagle
+-33.5,150.5,424,Tawny Frogmouth
+-42.5,147.5,417,Wedge-tailed Eagle
+-35.5,149.5,413,Tawny Frogmouth
+-38.5,145.5,410,Tawny Frogmouth
+-31.5,115.5,400,Tawny Frogmouth
+-28.5,153.5,399,Tawny Frogmouth
+-36.5,146.5,390,Wedge-tailed Eagle
+-42.5,147.5,389,Rainbow Lorikeet
+-35.5,144.5,386,Sulphur-crested Cockatoo
+-32.5,148.5,371,Rainbow Lorikeet
+-12.5,143.5,370,Sulphur-crested Cockatoo
+-36.5,149.5,362,Sulphur-crested Cockatoo
+-43.5,147.5,360,Wedge-tailed Eagle
+-32.5,149.5,359,Sulphur-crested Cockatoo
+-33.5,149.5,352,Rainbow Lorikeet
+-38.5,146.5,346,Sulphur-crested Cockatoo
+-36.5,143.5,341,Sulphur-crested Cockatoo
+-37.5,143.5,338,Wedge-tailed Eagle
+-34.5,150.5,330,Wedge-tailed Eagle
+-31.5,152.5,328,Tawny Frogmouth
+-23.5,151.5,324,Rainbow Lorikeet
+-28.5,153.5,319,Wedge-tailed Eagle
+-34.5,142.5,311,Rainbow Lorikeet
+-36.5,143.5,296,Wedge-tailed Eagle
+-38.5,144.5,279,Tawny Frogmouth
+-35.5,148.5,277,Wedge-tailed Eagle
+-32.5,115.5,254,Tawny Frogmouth
+-32.5,151.5,253,Wedge-tailed Eagle
+-38.5,143.5,233,Wedge-tailed Eagle
+-28.5,151.5,232,Wedge-tailed Eagle
+-35.5,138.5,229,Wedge-tailed Eagle
+-31.5,152.5,224,Wedge-tailed Eagle
+-41.5,146.5,224,Wedge-tailed Eagle
+-32.5,116.5,222,Wedge-tailed Eagle
+-38.5,146.5,218,Emu
+-31.5,138.5,218,Emu
+-38.5,142.5,212,Emu
+-38.5,144.5,207,Emu
+-37.5,142.5,201,Emu
+-36.5,145.5,196,Wedge-tailed Eagle
+-41.5,147.5,194,Wedge-tailed Eagle
+-42.5,147.5,185,Tawny Frogmouth
+-33.5,151.5,183,Wedge-tailed Eagle
+-34.5,138.5,180,Tawny Frogmouth
+-38.5,146.5,178,Wedge-tailed Eagle
+-26.5,153.5,177,Tawny Frogmouth
+-34.5,118.5,176,Wedge-tailed Eagle
+-26.5,152.5,173,Tawny Frogmouth
+-17.5,145.5,168,Wedge-tailed Eagle
+-26.5,152.5,166,Wedge-tailed Eagle
+-35.5,144.5,165,Emu
+-32.5,150.5,165,Wedge-tailed Eagle
+-35.5,138.5,160,Tawny Frogmouth
+-30.5,152.5,154,Wedge-tailed Eagle
+-36.5,149.5,147,Wedge-tailed Eagle
+-34.5,138.5,145,Wedge-tailed Eagle
+-34.5,116.5,141,Emu
+-37.5,142.5,140,Wedge-tailed Eagle
+-17.5,122.5,137,Wedge-tailed Eagle
+-34.5,135.5,135,Emu
+-29.5,151.5,135,Wedge-tailed Eagle
+-37.5,143.5,133,Tawny Frogmouth
+-34.5,142.5,133,Wedge-tailed Eagle
+-35.5,144.5,131,Wedge-tailed Eagle
+-27.5,151.5,130,Tawny Frogmouth
+-19.5,146.5,129,Tawny Frogmouth
+-40.5,148.5,123,Wedge-tailed Eagle
+-28.5,145.5,122,Emu
+-40.5,147.5,121,Wedge-tailed Eagle
+-16.5,145.5,121,Tawny Frogmouth
+-31.5,138.5,121,Wedge-tailed Eagle
+-33.5,149.5,119,Wedge-tailed Eagle
+-28.5,151.5,119,Emu
+-34.5,115.5,117,Emu
+-34.5,149.5,115,Wedge-tailed Eagle
+-12.5,130.5,115,Tawny Frogmouth
+-31.5,141.5,114,Emu
+-16.5,145.5,113,Wedge-tailed Eagle
+-17.5,122.5,113,Tawny Frogmouth
+-28.5,152.5,111,Wedge-tailed Eagle
+-34.5,148.5,110,Wedge-tailed Eagle
+-37.5,147.5,110,Tawny Frogmouth
+-19.5,146.5,109,Wedge-tailed Eagle
+-34.5,141.5,109,Emu
+-27.5,153.5,107,Wedge-tailed Eagle
+-35.5,148.5,106,Emu
+-43.5,147.5,105,Tawny Frogmouth
+-30.5,145.5,103,Emu
+-35.5,139.5,95,Emu
+-25.5,113.5,95,Emu
+-34.5,118.5,95,Emu
+-36.5,146.5,94,Tawny Frogmouth
+-35.5,139.5,92,Wedge-tailed Eagle
+-32.5,142.5,92,Emu
+-30.5,152.5,88,Tawny Frogmouth
+-34.5,138.5,85,Emu
+-32.5,115.5,82,Emu
+-17.5,145.5,82,Tawny Frogmouth
+-36.5,145.5,81,Tawny Frogmouth
+-29.5,142.5,81,Emu
+-36.5,149.5,80,Tawny Frogmouth
+-35.5,142.5,80,Emu
+-30.5,149.5,78,Emu
+-24.5,152.5,78,Tawny Frogmouth
+-35.5,138.5,78,Emu
+-28.5,151.5,76,Tawny Frogmouth
+-32.5,138.5,76,Emu
+-34.5,143.5,74,Emu
+-29.5,141.5,74,Emu
+-36.5,144.5,74,Tawny Frogmouth
+-28.5,150.5,73,Emu
+-34.5,117.5,73,Emu
+-34.5,142.5,71,Tawny Frogmouth
+-32.5,116.5,66,Emu
+-23.5,144.5,65,Emu
+-34.5,144.5,65,Emu
+-28.5,152.5,64,Tawny Frogmouth
+-34.5,140.5,64,Emu
+-32.5,152.5,63,Tawny Frogmouth
+-32.5,145.5,63,Emu
+-27.5,114.5,62,Emu
+-35.5,136.5,62,Emu
+-32.5,116.5,60,Tawny Frogmouth
+-32.5,149.5,60,Emu
+-27.5,145.5,60,Emu
+-38.5,141.5,59,Emu
+-28.5,144.5,58,Emu
+-30.5,153.5,57,Tawny Frogmouth
+-37.5,147.5,57,Emu
+-33.5,115.5,57,Tawny Frogmouth
+-32.5,137.5,56,Emu
+-35.5,145.5,55,Emu
+-35.5,141.5,55,Emu
+-31.5,115.5,53,Emu
+-34.5,150.5,53,Emu
+-30.5,115.5,52,Emu
+-34.5,139.5,51,Emu
+-36.5,142.5,51,Tawny Frogmouth
+-34.5,151.5,50,Tawny Frogmouth
+-38.5,146.5,45,Tawny Frogmouth
+-29.5,151.5,40,Tawny Frogmouth
+-41.5,147.5,39,Tawny Frogmouth
+-41.5,146.5,39,Tawny Frogmouth
+-30.5,151.5,39,Tawny Frogmouth
+-25.5,152.5,37,Tawny Frogmouth

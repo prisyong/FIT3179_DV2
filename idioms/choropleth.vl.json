@@ -2,11 +2,13 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Where are birds reported most?",
-    "subtitle": "Citizen science sightings per 1,000 km², 2025"
+    "subtitle": "Citizen science sightings per 1,000 km\u00b2, 2025"
   },
   "width": 520,
   "height": 450,
-  "projection": {"type": "mercator"},
+  "projection": {
+    "type": "mercator"
+  },
   "params": [
     {
       "name": "pick",
@@ -28,38 +30,78 @@
       }
     }
   ],
-  "data": {"url": "data/choropleth_data.csv"},
+  "data": {
+    "url": "data/choropleth_data.csv"
+  },
   "transform": [
-    {"filter": "datum.Species == pick"},
+    {
+      "filter": "datum.Species == pick"
+    },
     {
       "lookup": "State",
       "from": {
         "data": {
           "url": "data/australia_states.topojson",
-          "format": {"type": "topojson", "feature": "states"}
+          "format": {
+            "type": "topojson",
+            "feature": "states"
+          }
         },
         "key": "properties.State"
       },
       "as": "geo"
     },
-    {"calculate": "max(datum.Per_1000km2, 0.01)", "as": "Colour_Value"}
+    {
+      "calculate": "max(datum.Per_1000km2, 0.01)",
+      "as": "Colour_Value"
+    }
   ],
-  "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1.2},
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 1.2
+  },
   "encoding": {
-    "shape": {"field": "geo", "type": "geojson"},
+    "shape": {
+      "field": "geo",
+      "type": "geojson"
+    },
     "color": {
       "field": "Colour_Value",
       "type": "quantitative",
-      "scale": {"type": "log", "scheme": "greens"},
-      "legend": {"format": ",~g", "gradientLength": 220},
-      "title": "Sightings / 1,000 km²"
+      "scale": {
+        "type": "log",
+        "scheme": "greens"
+      },
+      "legend": {
+        "format": ",~g",
+        "gradientLength": 220
+      },
+      "title": "Sightings / 1,000 km\u00b2"
     },
     "tooltip": [
-      {"field": "State"},
-      {"field": "Species"},
-      {"field": "Sightings", "type": "quantitative", "format": ","},
-      {"field": "Per_1000km2", "type": "quantitative", "title": "Per 1,000 km²", "format": ",.1f"},
-      {"field": "Observers", "type": "quantitative", "format": ","}
+      {
+        "field": "State"
+      },
+      {
+        "field": "Species"
+      },
+      {
+        "field": "Sightings",
+        "type": "quantitative",
+        "format": ","
+      },
+      {
+        "field": "Per_1000km2",
+        "type": "quantitative",
+        "title": "Per 1,000 km\u00b2",
+        "format": ",.1f"
+      },
+      {
+        "field": "Observers",
+        "type": "quantitative",
+        "format": ","
+      }
     ]
   }
 }

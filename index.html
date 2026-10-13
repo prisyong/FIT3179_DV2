@@ -2,18 +2,59 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Australian Bird Sightings 2025</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.21.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        background: #ffffff;        /* page colour */
+        color: #222222;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 24px 16px;
+      }
+      .card {
+        background: #dfeaf3;        /* container colour - also acts as the sea */
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 32px;
+        overflow-x: auto;           /* scroll instead of overflowing on small screens */
+      }
+      .card p {
+        margin: 12px 0 0;
+        font-size: 14px;
+        color: #444444;
+      }
+    </style>
   </head>
   <body>
     <h1>Australian Bird Sightings 2025</h1>
 
-    <div id="choropleth"></div>
+    <div class="card">
+      <div id="choropleth"></div>
+      <p>Victoria and the ACT have the most sightings for their size.</p>
+    </div>
+
+    <div class="card">
+      <div id="bin_map"></div>
+      <p>White areas had no sightings in 2025 – mostly remote inland areas with few observers.</p>
+    </div>
+
+    <div class="card">
+      <div id="proportional_symbol_map"></div>
+      <p>Hotspots cluster around the capital cities, where most birdwatchers live.</p>
+    </div>
 
     <script>
-      vegaEmbed("#choropleth", "idioms/choropleth.vl.json", { actions: false });
+      // background: null makes every chart transparent, so the card colour shows through
+      const opts = { actions: false, config: { background: null } };
+
+      vegaEmbed("#choropleth", "idioms/choropleth.vl.json", opts);
+      vegaEmbed("#bin_map", "idioms/bin_map.vl.json", opts);
+      vegaEmbed("#proportional_symbol_map", "idioms/proportional_symbol_map.vl.json", opts);
     </script>
   </body>
 </html>

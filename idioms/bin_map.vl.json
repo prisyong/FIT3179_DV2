@@ -1,0 +1,132 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Where can you find the most bird variety?",
+    "subtitle": "Number of the 8 species reported in each 0.5\u00b0 grid square (~50 km), 2025. White = no sightings."
+  },
+  "width": 520,
+  "height": 450,
+  "projection": {
+    "type": "mercator"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ffffff",
+        "stroke": null
+      }
+    },
+    {
+      "data": {
+        "url": "data/bin_map_data.csv",
+        "format": {
+          "type": "csv",
+          "parse": {
+            "Latitude": "number",
+            "Longitude": "number",
+            "Species_Seen": "number",
+            "Sightings": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "{'type': 'Feature', 'geometry': {'type': 'Polygon', 'coordinates': [[[datum.Longitude - 0.25, datum.Latitude - 0.25], [datum.Longitude - 0.25, datum.Latitude + 0.25], [datum.Longitude + 0.25, datum.Latitude + 0.25], [datum.Longitude + 0.25, datum.Latitude - 0.25], [datum.Longitude - 0.25, datum.Latitude - 0.25]]]}}",
+          "as": "cell"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 0.4
+      },
+      "encoding": {
+        "shape": {
+          "field": "cell",
+          "type": "geojson"
+        },
+        "color": {
+          "field": "Species_Seen",
+          "type": "ordinal",
+          "scale": {
+            "domain": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "range": [
+              "#ffffff",
+              "#dfdfed",
+              "#c7c8e1",
+              "#acaad1",
+              "#918ec2",
+              "#796eb2",
+              "#65489f",
+              "#51228d",
+              "#3f007d"
+            ]
+          },
+          "title": "Species seen (of 8)",
+          "legend": {
+            "symbolType": "square",
+            "symbolSize": 100,
+            "symbolStrokeColor": "#999999",
+            "symbolStrokeWidth": 0.5,
+            "labelExpr": "datum.label == '0' ? '0 (no sightings)' : datum.label"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Species_Seen",
+            "type": "quantitative",
+            "title": "Species seen"
+          },
+          {
+            "field": "Sightings",
+            "type": "quantitative",
+            "format": ","
+          },
+          {
+            "field": "Latitude",
+            "type": "quantitative",
+            "format": ".1f"
+          },
+          {
+            "field": "Longitude",
+            "type": "quantitative",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/australia_states.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#555555",
+        "strokeWidth": 0.8
+      }
+    }
+  ]
+}
