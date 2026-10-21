@@ -2,152 +2,105 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Which birds make up each month's sightings?",
-    "subtitle": "Sightings per species through 2025 – band thickness = number of sightings"
+    "subtitle": "Each species' share of all sightings per month in 2025"
   },
   "width": 620,
   "height": 320,
-  "layer": [
+  "data": {
+    "url": "data/streamgraph_data.csv",
+    "format": {
+      "type": "csv",
+      "parse": { "Month_Num": "number", "Sightings": "number" }
+    }
+  },
+  "transform": [
     {
-      "data": {
-        "url": "data/streamgraph_data.csv",
-        "format": {
-          "type": "csv",
-          "parse": {
-            "Month_Num": "number",
-            "Sightings": "number"
-          }
-        }
-      },
-      "transform": [
-        {
-          "calculate": "{\"Australian Magpie\": 0, \"Rainbow Lorikeet\": 1, \"Superb Fairywren\": 2, \"Sulphur-crested Cockatoo\": 3, \"Laughing Kookaburra\": 4, \"Wedge-tailed Eagle\": 5, \"Tawny Frogmouth\": 6, \"Emu\": 7}[datum.Species]",
-          "as": "Species_Order"
-        }
-      ],
-      "mark": {
-        "type": "area",
-        "interpolate": "monotone",
-        "stroke": "#ffffff",
-        "strokeWidth": 0.5
-      },
-      "encoding": {
-        "x": {
-          "field": "Month_Num",
-          "type": "quantitative",
-          "title": "Month (1 = January)",
-          "scale": {
-            "domain": [
-              1,
-              12
-            ]
-          },
-          "axis": {
-            "values": [
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11,
-              12
-            ],
-            "labelExpr": "datum.value",
-            "grid": true,
-            "labelAngle": 0,
-            "labelAlign": "center",
-            "labelFontSize": 11
-          }
-        },
-        "y": {
-          "field": "Sightings",
-          "type": "quantitative",
-          "stack": "center",
-          "axis": null
-        },
-        "color": {
-          "field": "Species",
-          "type": "nominal",
-          "scale": {
-            "domain": [
-              "Australian Magpie",
-              "Rainbow Lorikeet",
-              "Superb Fairywren",
-              "Sulphur-crested Cockatoo",
-              "Laughing Kookaburra",
-              "Wedge-tailed Eagle",
-              "Tawny Frogmouth",
-              "Emu"
-            ],
-            "range": [
-              "#4c78a8",
-              "#f58518",
-              "#54a24b",
-              "#e45756",
-              "#72b7b2",
-              "#b279a2",
-              "#9d755d",
-              "#eeca3b"
-            ]
-          },
-          "title": "Species"
-        },
-        "order": {
-          "field": "Species_Order",
-          "type": "quantitative"
-        },
-        "tooltip": [
-          {
-            "field": "Species"
-          },
-          {
-            "field": "Month"
-          },
-          {
-            "field": "Sightings",
-            "type": "quantitative",
-            "format": ","
-          }
-        ]
-      }
+      "calculate": "{\"Australian Magpie\": 0, \"Rainbow Lorikeet\": 1, \"Superb Fairywren\": 2, \"Sulphur-crested Cockatoo\": 3, \"Laughing Kookaburra\": 4, \"Wedge-tailed Eagle\": 5, \"Tawny Frogmouth\": 6, \"Emu\": 7}[datum.Species]",
+      "as": "Species_Order"
     },
     {
-      "data": {
-        "values": [
-          {
-            "Month_Num": 1.6
-          }
+      "joinaggregate": [
+        { "op": "sum", "field": "Sightings", "as": "Month_Total" }
+      ],
+      "groupby": ["Month_Num"]
+    },
+    { "calculate": "datum.Sightings / datum.Month_Total", "as": "Share" }
+  ],
+  "mark": {
+    "type": "area",
+    "stroke": "#ffffff",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "x": {
+      "field": "Month",
+      "type": "ordinal",
+      "sort": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "title": "Month",
+      "scale": { "padding": 0 },
+      "axis": {
+        "labelAngle": 0,
+        "labelFontSize": 11
+      }
+    },
+    "y": {
+      "field": "Sightings",
+      "type": "quantitative",
+      "stack": "normalize",
+      "title": "Share of sightings",
+      "axis": { "format": "%", "values": [0, 0.25, 0.5, 0.75, 1] }
+    },
+    "color": {
+      "field": "Species",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Australian Magpie",
+          "Rainbow Lorikeet",
+          "Superb Fairywren",
+          "Sulphur-crested Cockatoo",
+          "Laughing Kookaburra",
+          "Wedge-tailed Eagle",
+          "Tawny Frogmouth",
+          "Emu"
+        ],
+        "range": [
+          "#4c78a8",
+          "#f58518",
+          "#54a24b",
+          "#e45756",
+          "#72b7b2",
+          "#b279a2",
+          "#9d755d",
+          "#eeca3b"
         ]
       },
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#222222",
-        "lineHeight": 15,
-        "dx": 0,
-        "baseline": "top"
-      },
-      "encoding": {
-        "x": {
-          "field": "Month_Num",
-          "type": "quantitative"
-        },
-        "y": {
-          "value": 4
-        },
-        "text": {
-          "value": [
-            "Feb → Oct: +32,639 sightings – the five common",
-            "birds supply 92% of the spring rise"
-          ]
-        }
+      "title": "Species"
+    },
+    "order": { "field": "Species_Order", "type": "quantitative" },
+    "tooltip": [
+      { "field": "Species" },
+      { "field": "Month" },
+      { "field": "Sightings", "type": "quantitative", "format": "," },
+      {
+        "field": "Share",
+        "type": "quantitative",
+        "format": ".1%",
+        "title": "Share of month"
       }
-    }
-  ]
+    ]
+  }
 }

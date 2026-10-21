@@ -4,18 +4,15 @@
     "text": "Each species' share of all sightings",
     "subtitle": "Each square = 1% of the 867,022 sightings in 2025"
   },
-  "width": 230,
-  "height": 230,
+  "width": 330,
+  "height": 330,
   "layer": [
     {
       "data": {
         "url": "data/waffle_chart_data.csv",
         "format": {
           "type": "csv",
-          "parse": {
-            "Row": "number",
-            "Col": "number"
-          }
+          "parse": { "Row": "number", "Col": "number" }
         }
       },
       "mark": {
@@ -25,16 +22,8 @@
         "cornerRadius": 3
       },
       "encoding": {
-        "x": {
-          "field": "Col",
-          "type": "ordinal",
-          "axis": null
-        },
-        "y": {
-          "field": "Row",
-          "type": "ordinal",
-          "axis": null
-        },
+        "x": { "field": "Col", "type": "ordinal", "axis": null },
+        "y": { "field": "Row", "type": "ordinal", "axis": null },
         "color": {
           "field": "Species",
           "type": "nominal",
@@ -62,62 +51,109 @@
           },
           "title": "Species",
           "legend": {
-            "orient": "bottom",
-            "columns": 2,
+            "orient": "right",
+            "direction": "vertical",
+            "columns": 1,
+            "offset": 16,
             "title": null,
-            "labelFontSize": 10,
-            "symbolSize": 80
+            "labelFontSize": 11,
+            "symbolSize": 90,
+            "rowPadding": 8
           }
         },
         "tooltip": [
-          {
-            "field": "Species"
-          },
-          {
-            "field": "Squares",
-            "title": "Squares (%)"
-          },
-          {
-            "field": "Share_Pct",
-            "title": "Exact share (%)"
-          }
+          { "field": "Species" },
+          { "field": "Squares", "title": "Squares (%)" },
+          { "field": "Share_Pct", "title": "Exact share (%)" }
         ]
       }
     },
     {
-      "data": {
-        "values": [
-          {
-            "Col": 9,
-            "Row": 9
-          }
-        ]
-      },
+      "data": { "values": [{}] },
       "mark": {
-        "type": "text",
-        "align": "left",
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#222222",
-        "lineHeight": 15,
-        "dx": 24,
-        "dy": -4
+        "type": "rect",
+        "fill": "#333333",
+        "fillOpacity": 0.55,
+        "cornerRadius": 6
       },
       "encoding": {
-        "x": {
-          "field": "Col",
-          "type": "ordinal"
-        },
-        "y": {
-          "field": "Row",
-          "type": "ordinal"
-        },
-        "text": {
-          "value": [
-            "\u2190 The Emu: 1 square.",
-            "The Magpie fills 29."
-          ]
-        }
+        "x": { "value": 60 },
+        "x2": { "value": 270 },
+        "y": { "value": 37 },
+        "y2": { "value": 63 }
+      }
+    },
+    {
+      "data": { "values": [{}] },
+      "mark": {
+        "type": "rect",
+        "fill": "#333333",
+        "fillOpacity": 0.55,
+        "cornerRadius": 6
+      },
+      "encoding": {
+        "x": { "value": 140 },
+        "x2": { "value": 270 },
+        "y": { "value": 269 },
+        "y2": { "value": 291 }
+      }
+    },
+    {
+      "data": { "values": [{}] },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "x": { "value": 165 },
+        "y": { "value": 50 },
+        "text": { "value": "Australian Magpie: 29 squares" }
+      }
+    },
+    {
+      "data": { "values": [{}] },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#ffffff"
+      },
+      "encoding": {
+        "x": { "value": 205 },
+        "y": { "value": 280 },
+        "text": { "value": "Emu: just 1 square" }
+      }
+    },
+    {
+      "data": { "values": [{}] },
+      "mark": { "type": "rule", "color": "#222222", "strokeWidth": 2 },
+      "encoding": {
+        "x": { "value": 273 },
+        "y": { "value": 280 },
+        "x2": { "value": 303 },
+        "y2": { "value": 304 }
+      }
+    },
+    {
+      "data": { "values": [{}] },
+      "mark": {
+        "type": "point",
+        "shape": "triangle",
+        "angle": 129,
+        "size": 50,
+        "filled": true,
+        "color": "#222222",
+        "opacity": 1
+      },
+      "encoding": {
+        "x": { "value": 303 },
+        "y": { "value": 304 }
       }
     }
   ]

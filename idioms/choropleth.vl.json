@@ -7,7 +7,10 @@
   "width": 520,
   "height": 450,
   "projection": {
-    "type": "mercator"
+    "type": "albers",
+    "parallels": [-18, -36],
+    "rotate": [-132, 0],
+    "center": [0, -27]
   },
   "view": {
     "fill": "#ebe8e1",
@@ -86,9 +89,7 @@
     },
     {
       "data": {
-        "values": [
-          {}
-        ]
+        "values": [{}]
       },
       "mark": {
         "type": "rule",
@@ -112,9 +113,7 @@
     },
     {
       "data": {
-        "values": [
-          {}
-        ]
+        "values": [{}]
       },
       "mark": {
         "type": "circle",
@@ -133,9 +132,7 @@
     },
     {
       "data": {
-        "values": [
-          {}
-        ]
+        "values": [{}]
       },
       "mark": {
         "type": "text",

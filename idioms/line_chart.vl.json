@@ -27,13 +27,19 @@
         "Nov",
         "Dec"
       ],
-      "title": "Month (1 = January)",
+      "title": "Month",
       "axis": {
         "labelAngle": 0,
         "labelAlign": "center",
-        "labelFontSize": 11,
-        "labelExpr": "indexof([\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"], datum.value) + 1"
+        "labelFontSize": 11
       }
+    },
+    "y": {
+      "field": "Sightings",
+      "type": "quantitative",
+      "title": "Sightings",
+      "scale": { "zero": true },
+      "axis": { "format": "~s" }
     }
   },
   "layer": [
@@ -49,17 +55,6 @@
         }
       },
       "encoding": {
-        "y": {
-          "field": "Sightings",
-          "type": "quantitative",
-          "title": "Sightings",
-          "scale": {
-            "zero": true
-          },
-          "axis": {
-            "format": "~s"
-          }
-        },
         "tooltip": [
           {
             "field": "Month"
@@ -97,15 +92,8 @@
         "dx": 0
       },
       "encoding": {
-        "y": {
-          "field": "Sightings",
-          "type": "quantitative"
-        },
         "text": {
-          "value": [
-            "Peak: 93,308 in October –",
-            "54% above February's low"
-          ]
+          "value": ["Peak: 93,308 in October –", "54% above February's low"]
         }
       }
     }

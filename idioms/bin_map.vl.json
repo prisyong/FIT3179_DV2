@@ -7,7 +7,10 @@
   "width": 520,
   "height": 450,
   "projection": {
-    "type": "mercator"
+    "type": "albers",
+    "parallels": [-18, -36],
+    "rotate": [-132, 0],
+    "center": [0, -27]
   },
   "view": {
     "fill": "#ebe8e1",
@@ -61,17 +64,7 @@
           "field": "Species_Seen",
           "type": "ordinal",
           "scale": {
-            "domain": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8
-            ],
+            "domain": [0, 1, 2, 3, 4, 5, 6, 7, 8],
             "range": [
               "#ffffff",
               "#ccdff1",
@@ -86,11 +79,13 @@
           },
           "title": "Species seen (of 8)",
           "legend": {
+            "orient": "right",
+            "direction": "vertical",
             "symbolType": "square",
-            "symbolSize": 100,
+            "symbolSize": 150,
             "symbolStrokeColor": "#999999",
             "symbolStrokeWidth": 0.5,
-            "labelExpr": "datum.label == '0' ? '0 (no sightings)' : datum.label"
+            "labelFontSize": 11
           }
         },
         "tooltip": [
@@ -141,26 +136,11 @@
               "type": "Polygon",
               "coordinates": [
                 [
-                  [
-                    121,
-                    -29
-                  ],
-                  [
-                    121,
-                    -20
-                  ],
-                  [
-                    129,
-                    -20
-                  ],
-                  [
-                    129,
-                    -29
-                  ],
-                  [
-                    121,
-                    -29
-                  ]
+                  [121, -29],
+                  [121, -20],
+                  [129, -20],
+                  [129, -29],
+                  [121, -29]
                 ]
               ]
             }
@@ -175,17 +155,12 @@
         "fill": null,
         "stroke": "#222222",
         "strokeWidth": 1.2,
-        "strokeDash": [
-          4,
-          3
-        ]
+        "strokeDash": [4, 3]
       }
     },
     {
       "data": {
-        "values": [
-          {}
-        ]
+        "values": [{}]
       },
       "mark": {
         "type": "text",

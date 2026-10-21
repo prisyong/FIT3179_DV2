@@ -10,7 +10,10 @@
   "width": 520,
   "height": 450,
   "projection": {
-    "type": "mercator"
+    "type": "albers",
+    "parallels": [-18, -36],
+    "rotate": [-132, 0],
+    "center": [0, -27]
   },
   "view": {
     "fill": "#ebe8e1",
@@ -90,15 +93,13 @@
           "field": "Sightings",
           "type": "quantitative",
           "scale": {
-            "range": [
-              6,
-              900
-            ],
+            "range": [6, 900],
             "zero": false,
             "domainMin": 1
           },
           "legend": {
             "title": "Sightings",
+            "tickCount": 3,
             "format": ",.0f",
             "symbolFillColor": "#2171b5",
             "symbolOpacity": 0.55,
@@ -135,9 +136,7 @@
     },
     {
       "data": {
-        "values": [
-          {}
-        ]
+        "values": [{}]
       },
       "transform": [
         {
@@ -166,9 +165,7 @@
     },
     {
       "data": {
-        "values": [
-          {}
-        ]
+        "values": [{}]
       },
       "transform": [
         {
@@ -192,9 +189,7 @@
     },
     {
       "data": {
-        "values": [
-          {}
-        ]
+        "values": [{}]
       },
       "transform": [
         {

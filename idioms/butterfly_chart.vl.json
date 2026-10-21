@@ -1,0 +1,230 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Seen often, or seen widely?",
+    "subtitle": "Total sightings (left) vs number of map squares with a sighting (right), 2025"
+  },
+  "data": { "url": "data/butterfly_data.csv" },
+  "transform": [
+    {
+      "lookup": "Species",
+      "from": {
+        "data": { "url": "data/lollipop_chart_data.csv" },
+        "key": "Species",
+        "fields": ["Sightings"]
+      }
+    },
+    { "calculate": "toNumber(datum.Squares)", "as": "Squares" },
+    { "calculate": "toNumber(datum.Sightings)", "as": "Sightings" }
+  ],
+  "spacing": 0,
+  "hconcat": [
+    {
+      "width": 160,
+      "height": 300,
+      "encoding": {
+        "y": {
+          "field": "Species",
+          "type": "nominal",
+          "sort": [
+            "Australian Magpie",
+            "Rainbow Lorikeet",
+            "Superb Fairywren",
+            "Sulphur-crested Cockatoo",
+            "Laughing Kookaburra",
+            "Wedge-tailed Eagle",
+            "Tawny Frogmouth",
+            "Emu"
+          ],
+          "axis": null
+        },
+        "x": {
+          "field": "Sightings",
+          "type": "quantitative",
+          "scale": { "reverse": true },
+          "title": "Total sightings",
+          "axis": { "format": "~s", "tickCount": 3, "labelFontSize": 11 }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "cornerRadiusTopLeft": 3,
+            "cornerRadiusBottomLeft": 3
+          },
+          "encoding": {
+            "color": {
+              "field": "Species",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+                  "Australian Magpie",
+                  "Rainbow Lorikeet",
+                  "Superb Fairywren",
+                  "Sulphur-crested Cockatoo",
+                  "Laughing Kookaburra",
+                  "Wedge-tailed Eagle",
+                  "Tawny Frogmouth",
+                  "Emu"
+                ],
+                "range": [
+                  "#4c78a8",
+                  "#f58518",
+                  "#54a24b",
+                  "#e45756",
+                  "#72b7b2",
+                  "#b279a2",
+                  "#9d755d",
+                  "#eeca3b"
+                ]
+              },
+              "legend": null
+            },
+            "tooltip": [
+              { "field": "Species" },
+              { "field": "Sightings", "type": "quantitative", "format": "," }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -4,
+            "fontSize": 10,
+            "color": "#444444"
+          },
+          "encoding": {
+            "text": {
+              "field": "Sightings",
+              "type": "quantitative",
+              "format": "~s"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 150,
+      "height": 300,
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#333333"
+      },
+      "encoding": {
+        "y": {
+          "field": "Species",
+          "type": "nominal",
+          "sort": [
+            "Australian Magpie",
+            "Rainbow Lorikeet",
+            "Superb Fairywren",
+            "Sulphur-crested Cockatoo",
+            "Laughing Kookaburra",
+            "Wedge-tailed Eagle",
+            "Tawny Frogmouth",
+            "Emu"
+          ],
+          "axis": null
+        },
+        "x": { "value": 75 },
+        "text": { "field": "Species" }
+      }
+    },
+    {
+      "width": 160,
+      "height": 300,
+      "encoding": {
+        "y": {
+          "field": "Species",
+          "type": "nominal",
+          "sort": [
+            "Australian Magpie",
+            "Rainbow Lorikeet",
+            "Superb Fairywren",
+            "Sulphur-crested Cockatoo",
+            "Laughing Kookaburra",
+            "Wedge-tailed Eagle",
+            "Tawny Frogmouth",
+            "Emu"
+          ],
+          "axis": null
+        },
+        "x": {
+          "field": "Squares",
+          "type": "quantitative",
+          "title": "Map squares with a sighting",
+          "axis": { "tickCount": 3, "labelFontSize": 11 }
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "bar",
+            "cornerRadiusTopRight": 3,
+            "cornerRadiusBottomRight": 3
+          },
+          "encoding": {
+            "color": {
+              "field": "Species",
+              "type": "nominal",
+              "scale": {
+                "domain": [
+                  "Australian Magpie",
+                  "Rainbow Lorikeet",
+                  "Superb Fairywren",
+                  "Sulphur-crested Cockatoo",
+                  "Laughing Kookaburra",
+                  "Wedge-tailed Eagle",
+                  "Tawny Frogmouth",
+                  "Emu"
+                ],
+                "range": [
+                  "#4c78a8",
+                  "#f58518",
+                  "#54a24b",
+                  "#e45756",
+                  "#72b7b2",
+                  "#b279a2",
+                  "#9d755d",
+                  "#eeca3b"
+                ]
+              },
+              "legend": null
+            },
+            "tooltip": [
+              { "field": "Species" },
+              {
+                "field": "Squares",
+                "type": "quantitative",
+                "title": "Map squares",
+                "format": ","
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 4,
+            "fontSize": 10,
+            "color": "#444444"
+          },
+          "encoding": {
+            "text": {
+              "field": "Squares",
+              "type": "quantitative",
+              "format": ","
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "config": { "view": { "stroke": null } }
+}

@@ -13,98 +13,104 @@
     "x": {
       "field": "Season",
       "type": "ordinal",
-      "sort": [
-        "Summer",
-        "Autumn",
-        "Winter",
-        "Spring"
-      ],
+      "sort": ["Summer", "Autumn", "Winter", "Spring"],
       "title": null,
       "axis": {
         "labelAngle": 0,
-        "labelFontSize": 12
+        "labelFontSize": 12,
+        "ticks": false
       }
     },
     "y": {
       "field": "Sightings",
       "type": "quantitative",
       "title": "Sightings",
-      "scale": {
-        "zero": true
-      },
+      "scale": { "domain": [0, 300000], "nice": false },
       "axis": {
-        "format": "~s"
+        "format": "~s",
+        "values": [0, 100000, 200000, 300000]
       }
     }
   },
   "layer": [
     {
       "mark": {
-        "type": "line",
-        "strokeWidth": 3,
-        "color": "#444444",
-        "point": {
-          "filled": true,
-          "size": 80,
-          "color": "#444444"
-        }
+        "type": "bar",
+        "width": { "band": 0.6 }
       },
       "encoding": {
+        "color": {
+          "condition": {
+            "test": "datum.Season == 'Spring'",
+            "value": "#2171b5"
+          },
+          "value": "#b8c7d9"
+        },
         "tooltip": [
-          {
-            "field": "Season"
-          },
-          {
-            "field": "Sightings",
-            "type": "quantitative",
-            "format": ","
-          },
-          {
-            "field": "Share_Pct",
-            "title": "Share of year (%)"
-          }
+          { "field": "Season" },
+          { "field": "Sightings", "type": "quantitative", "format": "," },
+          { "field": "Share_Pct", "title": "Share of year (%)" }
         ]
       }
     },
     {
       "mark": {
         "type": "text",
-        "dy": -14,
+        "baseline": "bottom",
+        "dy": -6,
         "fontSize": 11,
         "color": "#444444"
       },
       "encoding": {
-        "text": {
-          "field": "Sightings",
-          "type": "quantitative",
-          "format": ","
+        "text": { "field": "Sightings", "type": "quantitative", "format": "," }
+      }
+    },
+    {
+      "transform": [
+        {
+          "joinaggregate": [
+            { "op": "sum", "field": "Sightings", "as": "Total" }
+          ]
+        },
+        { "calculate": "datum.Sightings / datum.Total", "as": "Share" }
+      ],
+      "mark": {
+        "type": "text",
+        "baseline": "top",
+        "dy": 8,
+        "fontSize": 13,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": { "field": "Share", "type": "quantitative", "format": ".0%" },
+        "color": {
+          "condition": {
+            "test": "datum.Season == 'Spring'",
+            "value": "#ffffff"
+          },
+          "value": "#3d4f66"
         }
       }
     },
     {
       "data": {
-        "values": [
-          {
-            "Season": "Spring",
-            "Sightings": 150000
-          }
-        ]
+        "values": [{ "Season": "Summer", "Sightings": 292000 }]
       },
       "mark": {
         "type": "text",
-        "align": "right",
-        "dx": -8,
-        "dy": 0,
+        "align": "left",
+        "baseline": "top",
+        "dx": -24,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#222222",
+        "color": "#2171b5",
         "lineHeight": 15
       },
       "encoding": {
         "text": {
           "value": [
-            "Spring: 30% of the year's sightings \u2013",
-            "a third more than autumn \u2191"
+            "Spring: about 64,000 more sightings",
+            "than autumn, the quietest season"
           ]
         }
       }
